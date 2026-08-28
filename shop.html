@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>Shop | SAL'VES Studio</title>
+
+<meta
+    name="description"
+    content="Shop cute handmade crochet creations from SAL'VES Studio."
+>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Dancing+Script:wght@500;600;700&family=Fredoka:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Quicksand:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+>
+
+<link
+    rel="stylesheet"
+    href="css/style.css"
+>
+
+</head>
+
+<body>
+
+<!-- ================= ANNOUNCEMENT ================= -->
+
+<div class="announcement-bar">
+    🧶 Handmade with love • Cozy little yarn hugs • 🤎
+</div>
+
+
+<!-- ================= HEADER ================= -->
+
+<header class="site-header">
+
+    <div class="container header-inner">
+
+
+        <nav class="nav left-nav">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a
+                href="shop.html"
+                class="shop-active"
+            >
+                Shop
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+        </nav>
+
+
+        <a
+            href="index.html"
+            class="brand"
+        >
+
+            <span class="brand-decor">
+                🧸
+            </span>
+
+            <img
+                src="images/logo.jpg"
+                alt="SAL'VES Studio"
+                class="brand-logo"
+            >
+
+            <span class="brand-decor">
+                🎀
+            </span>
+
+        </a>
+
+
+        <nav class="nav right-nav">
+
+            <a href="custom.html">
+                Custom
+            </a>
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <a
+            href="cart.html"
+            class="cart"
+            aria-label="Shopping cart"
+        >
+
+            🛒
+
+            <span id="cart-count">
+                0
+            </span>
+
+        </a>
+
+
+    </div>
+
+</header>
+
+
+<!-- ================= SHOP ================= -->
+
+<main>
+
+
+    <section class="shop-hero">
+
+        <div class="container">
+
+
+            <div class="shop-heading">
+
+
+                <span class="little-label">
+                    🧶 little yarn shop
+                </span>
+
+
+                <h1>
+
+                    Shop the
+                    <span>
+                        cozy collection
+                    </span>
+
+                </h1>
+
+
+                <p>
+                    Handmade crochet goodies,
+                    stitched slowly and carefully
+                    with lots of love. 🤎
+                </p>
+
+
+            </div>
+
+
+            <!-- ================= TOOLS ================= -->
+
+            <div class="shop-tools">
+
+
+                <div class="search-box">
+
+                    <span>
+                        🔎
+                    </span>
+
+                    <input
+                        type="search"
+                        id="product-search"
+                        placeholder="Search your next yarn friend..."
+                    >
+
+                </div>
+
+
+                <div class="category-buttons">
+
+
+                    <button
+                        class="category-btn active"
+                        data-category="all"
+                    >
+                        All ♡
+                    </button>
+
+
+                    <button
+                        class="category-btn"
+                        data-category="bags"
+                    >
+                        👜 Bags
+                    </button>
+
+
+                    <button
+                        class="category-btn"
+                        data-category="plushies"
+                    >
+                        🧸 Plushies
+                    </button>
+
+
+                    <button
+                        class="category-btn"
+                        data-category="accessories"
+                    >
+                        🎀 Accessories
+                    </button>
+
+
+                    <button
+                        class="category-btn"
+                        data-category="gifts"
+                    >
+                        🎁 Gifts
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PRODUCTS ================= -->
+
+    <section class="products-section">
+
+        <div class="container">
+
+
+            <div class="section-top">
+
+
+                <div>
+
+                    <span class="tiny-title">
+                        ♡ handmade collection
+                    </span>
+
+
+                    <h2>
+
+                        Little things
+                        <span>
+                            made with love
+                        </span>
+
+                    </h2>
+
+                </div>
+
+
+                <a
+                    href="wishlist.html"
+                    class="wishlist-link"
+                >
+                    ♡ My Wishlist
+                </a>
+
+
+            </div>
+
+
+            <div
+                id="product-grid"
+                class="product-grid"
+            >
+
+
+                <!-- ================= PRODUCT 1 ================= -->
+
+                <article
+                    class="product-card"
+                    data-category="comfy dress"
+                    data-name="Baby Shower Dress"
+                >
+
+
+                    <div class="product-image">
+
+
+                        <span class="product-badge">
+                            New ♡
+                        </span>
+
+
+                        <button
+                            class="wishlist-button"
+                            data-product-id="Baby Shower Dress"
+                            aria-label="Add to wishlist"
+                        >
+                            ♡
+                        </button>
+
+
+                        <img
+                            src="images/baby.png"
+                            alt="Baby Shower Dress"
+                        >
+
+
+                    </div>
+
+
+                    <div class="product-info">
+
+
+                        <p class="product-category">
+                            comfy dress
+                        </p>
+
+
+                        <h3>
+                            Baby Shower Dress
+                        </h3>
+
+
+                        <p class="product-description">
+                            A soft comfy dress just 
+                            made for babies with hugs.
+                        </p>
+
+
+                        <div class="product-bottom">
+
+
+                            <strong>
+                                8 OMR
+                            </strong>
+
+
+                            <button
+                                class="add-cart-button"
+                                data-product-id="baby-shower-dress"
+                                data-name="Baby Shower Dress"
+                                data-price="8"
+                                data-image="Baby Shower Dress"
+                                data-category="dress"
+                            >
+                                Add to Cart 🧺
+                            </button>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </article>
+
+
+                <!-- ================= PRODUCT 2 ================= -->
+
+                <article
+                    class="product-card"
+                    data-category="bags"
+                    data-name="Mocha Choco Tote"
+                >
+
+
+                    <div class="product-image">
+
+
+                        <span class="product-badge">
+                            Handmade
+                        </span>
+
+
+                        <button
+                            class="wishlist-button"
+                            data-product-id="cozy-crochet-bag"
+                            aria-label="Add to wishlist"
+                        >
+                            ♡
+                        </button>
+
+
+                        <img
+                            src="images/bag.jpeg"
+                            alt="Mocha Choco Tote"
+                        >
+
+
+                    </div>
+
+
+                    <div class="product-info">
+
+
+                        <p class="product-category">
+                            Bag
+                        </p>
+
+
+                        <h3>
+                            Mocha Choco Tote
+                        </h3>
+
+
+                        <p class="product-description">
+                            A roomy handmade crochet bag
+                            for everyday adventures.
+                        </p>
+
+
+                        <div class="product-bottom">
+
+
+                            <strong>
+                                25 OMR
+                            </strong>
+
+
+                            <button
+                                class="add-cart-button"
+                                data-product-id="cozy-crochet-bag"
+                                data-name="Mocha Choco Tote"
+                                data-price="25"
+                                data-image="images/bag.jpeg"
+                                data-category="bags"
+                            >
+                                Add to Cart 🧺
+                            </button>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </article>
+
+
+                <!-- ================= PRODUCT 3 ================= -->
+
+                <article
+                    class="product-card"
+                    data-category="plushies"
+                    data-name="little teddy bear"
+                >
+
+
+                    <div class="product-image">
+
+
+                        <span class="product-badge">
+                            Cozy ♡
+                        </span>
+
+
+                        <button
+                            class="wishlist-button"
+                            data-product-id="little-teddy-bear"
+                            aria-label="Add to wishlist"
+                        >
+                            ♡
+                        </button>
+
+
+                        <img
+                            src="images/bear.jpeg"
+                            alt="Little Teddy Bear"
+                        >
+
+
+                    </div>
+
+
+                    <div class="product-info">
+
+
+                        <p class="product-category">
+                            Plushie
+                        </p>
+
+
+                        <h3>
+                            Little Teddy Bear
+                        </h3>
+
+
+                        <p class="product-description">
+                            A tiny handmade bear
+                            ready to become your bestie.
+                        </p>
+
+
+                        <div class="product-bottom">
+
+
+                            <strong>
+                                7 OMR
+                            </strong>
+
+
+                            <button
+                                class="add-cart-button"
+                                data-product-id="little-teddy-bear"
+                                data-name="Little Teddy Bear"
+                                data-price="7"
+                                data-image="images/bear.jpeg"
+                                data-category="plushies"
+                            >
+                                Add to Cart 🧺
+                            </button>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </article>
+
+
+                <!-- ================= COMING SOON ================= -->
+
+                <article
+                    class="coming-soon-card"
+                >
+
+
+                    <div class="coming-icon">
+                        🧶
+                    </div>
+
+
+                    <h3>
+                        More yarn friends
+                        coming soon!
+                    </h3>
+
+
+                    <p>
+                        New handmade creations are
+                        being stitched with love.
+                    </p>
+
+
+                    <a
+                        href="custom.html"
+                        class="outline-button"
+                    >
+                        Request Something ♡
+                    </a>
+
+
+                </article>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SHOP NOTE ================= -->
+
+    <section class="shop-note">
+
+        <div class="container">
+
+
+            <div class="note-card">
+
+
+                <div class="note-icon">
+                    🧸
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Every piece is handmade
+                    </h3>
+
+
+                    <p>
+                        Because our creations are handmade,
+                        tiny differences make each one unique.
+                        That's the magic of crochet. 🤎
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script src="js/main.js"></script>
+
+<script src="js/products.js"></script>
+
+
+<!-- ================= ADD TO CART FIX ================= -->
+
+<script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+        const cartCount = document.getElementById("cart-count");
+        const addButtons = document.querySelectorAll(".add-cart-button");
+
+        function getCart() {
+
+            try {
+
+                return JSON.parse(
+                    localStorage.getItem("salvesCart")
+                ) || [];
+
+            } catch (error) {
+
+                return [];
+
+            }
+
+        }
+
+
+        function saveCart(cart) {
+
+            localStorage.setItem(
+                "salvesCart",
+                JSON.stringify(cart)
+            );
+
+        }
+
+
+        function updateCartCount() {
+
+            const cart = getCart();
+
+            let totalItems = 0;
+
+            cart.forEach(function (item) {
+
+                totalItems += Number(item.quantity) || 1;
+
+            });
+
+            cartCount.textContent = totalItems;
+
+        }
+
+
+        function addProductToCart(button) {
+
+            const productId =
+                button.getAttribute("data-product-id");
+
+            const name =
+                button.getAttribute("data-name");
+
+            const price =
+                Number(button.getAttribute("data-price"));
+
+            const image =
+                button.getAttribute("data-image");
+
+            const category =
+                button.getAttribute("data-category");
+
+
+            let cart = getCart();
+
+
+            const existingProduct = cart.find(function (item) {
+
+                return item.id === productId;
+
+            });
+
+
+            if (existingProduct) {
+
+                existingProduct.quantity =
+                    (Number(existingProduct.quantity) || 1) + 1;
+
+            } else {
+
+                cart.push({
+
+                    id: productId,
+
+                    name: name,
+
+                    price: price,
+
+                    image: image,
+
+                    category: category,
+
+                    quantity: 1
+
+                });
+
+            }
+
+
+            saveCart(cart);
+
+            updateCartCount();
+
+
+            button.textContent = "Added ✓";
+
+            button.classList.add("added");
+
+
+            setTimeout(function () {
+
+                button.textContent = "Add to Cart 🧺";
+
+                button.classList.remove("added");
+
+            }, 1200);
+
+        }
+
+
+        addButtons.forEach(function (button) {
+
+            button.addEventListener("click", function () {
+
+                addProductToCart(button);
+
+            });
+
+        });
+
+
+        updateCartCount();
+
+    });
+
+</script>
+```
+
+</body>
+</html>

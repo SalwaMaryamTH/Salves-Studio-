@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Custom Orders | SAL'VES Studio</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <div class="announcement-bar">
+        🧶 Dream it • Stitch it • Love it 🤎
+    </div>
+
+    <header class="site-header">
+
+        <div class="container header-inner">
+
+            <nav class="nav left-nav">
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="about.html">About</a>
+            </nav>
+
+            <a href="index.html" class="brand">
+                <span class="brand-decor">🧸</span>
+
+                <img
+                    src="images/logo.jpg"
+                    alt="SAL'VES Studio"
+                    class="brand-logo"
+                >
+
+                <span class="brand-decor">🎀</span>
+            </a>
+
+            <nav class="nav right-nav">
+                <a href="custom.html">Custom</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <a href="cart.html" class="cart">
+                🛒
+                <span id="cart-count">0</span>
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <section class="custom-page">
+
+            <div class="container">
+
+                <div class="custom-heading">
+
+                    <span class="little-label">
+                        🎀 made especially for you
+                    </span>
+
+                    <h1>
+                        Create Your
+                        <span>Dream Piece</span>
+                    </h1>
+
+                    <p>
+                        Tell us what you're imagining and
+                        we'll turn your idea into a cozy
+                        crochet creation. 🧶
+                    </p>
+
+                </div>
+
+
+                <div class="custom-layout">
+
+
+                    <div class="custom-info">
+
+                        <div class="custom-feature">
+                            <span>🧶</span>
+                            <div>
+                                <h3>Tell us your idea</h3>
+                                <p>
+                                    Describe the item,
+                                    colors and style you want.
+                                </p>
+                            </div>
+                        </div>
+
+
+                        <div class="custom-feature">
+                            <span>🎨</span>
+                            <div>
+                                <h3>Choose your details</h3>
+                                <p>
+                                    Make your creation feel
+                                    completely yours.
+                                </p>
+                            </div>
+                        </div>
+
+
+                        <div class="custom-feature">
+                            <span>🤎</span>
+                            <div>
+                                <h3>Made with love</h3>
+                                <p>
+                                    Your piece will be carefully
+                                    handmade just for you.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="custom-form-card">
+
+                        <h2>
+                            Custom Request ♡
+                        </h2>
+
+                        <form id="custom-form">
+
+
+                            <div class="form-group">
+
+                                <label for="custom-name">
+                                    Your Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="custom-name"
+                                    required
+                                    placeholder="Your name"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="custom-email">
+                                    Email
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="custom-email"
+                                    required
+                                    placeholder="you@example.com"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="custom-type">
+                                    What would you like?
+                                </label>
+
+                                <select
+                                    id="custom-type"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Choose one...
+                                    </option>
+
+                                    <option value="bag">
+                                        👜 Bag
+                                    </option>
+
+                                    <option value="plushie">
+                                        🧸 Plushie
+                                    </option>
+
+                                    <option value="accessory">
+                                        🎀 Accessory
+                                    </option>
+
+                                    <option value="gift">
+                                        🎁 Gift
+                                    </option>
+
+                                    <option value="other">
+                                        🧶 Something else
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="custom-colors">
+                                    Colors
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="custom-colors"
+                                    placeholder="Example: brown, cream & pink"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="custom-details">
+                                    Tell us your idea
+                                </label>
+
+                                <textarea
+                                    id="custom-details"
+                                    rows="6"
+                                    required
+                                    placeholder="Describe your dream crochet piece..."
+                                ></textarea>
+
+                            </div>
+
+
+                            <button
+                                type="submit"
+                                class="cute-button"
+                            >
+                                Send Custom Request ♡
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="js/main.js"></script>
+    <script src="js/custom.js"></script>
+
+</body>
+
+</html>

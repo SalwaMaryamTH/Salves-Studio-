@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Your Cart ♡ | SAL'VES Studio</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <style>
+
+        .cart-page {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 25px 100px;
+        }
+
+        .cart-heading {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .cart-heading .little-label {
+            margin-bottom: 10px;
+        }
+
+        .cart-heading h1 {
+            margin: 0;
+        }
+
+        .cart-heading p {
+            margin-top: 10px;
+        }
+
+        .cart-layout {
+            display: grid;
+            grid-template-columns: 1.5fr .7fr;
+            gap: 30px;
+            align-items: start;
+        }
+
+        .cart-items-box,
+        .cart-summary {
+            background: white;
+            border-radius: 28px;
+            padding: 25px;
+            box-shadow: var(--shadow);
+        }
+
+        .cart-item {
+            display: grid;
+            grid-template-columns: 95px 1fr auto;
+            gap: 20px;
+            align-items: center;
+            padding: 18px 0;
+            border-bottom: 1px dashed rgba(111,81,67,.18);
+        }
+
+        .cart-item:last-child {
+            border-bottom: none;
+        }
+
+        .cart-item-image {
+            width: 95px;
+            height: 95px;
+            border-radius: 20px;
+            overflow: hidden;
+            background: var(--cream-dark);
+        }
+
+        .cart-item-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .cart-item-info h3 {
+            margin: 0 0 5px;
+            font-family: "Fredoka", sans-serif;
+            font-size: 20px;
+        }
+
+        .cart-item-info p {
+            margin: 0 0 12px;
+            font-size: 14px;
+        }
+
+        .quantity-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .quantity-controls button {
+            width: 30px;
+            height: 30px;
+            border: none;
+            border-radius: 50%;
+            background: var(--pink-light);
+            color: var(--brown-dark);
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .quantity-controls button:hover {
+            transform: scale(1.08);
+        }
+
+        .quantity-number {
+            min-width: 20px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .cart-item-right {
+            text-align: right;
+        }
+
+        .cart-item-price {
+            display: block;
+            font-weight: 800;
+            color: var(--brown-dark);
+            margin-bottom: 12px;
+        }
+
+        .remove-item {
+            border: none;
+            background: transparent;
+            color: var(--brown-light);
+            cursor: pointer;
+            font-family: "Quicksand", sans-serif;
+            font-weight: 700;
+        }
+
+        .remove-item:hover {
+            color: var(--brown-dark);
+        }
+
+        .cart-summary {
+            position: sticky;
+            top: 30px;
+        }
+
+        .cart-summary h2 {
+            margin-top: 0;
+            font-size: 28px;
+        }
+
+        .summary-line {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            margin: 15px 0;
+            font-size: 15px;
+        }
+
+        .summary-line strong {
+            color: var(--brown-dark);
+        }
+
+        .summary-total {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px dashed rgba(111,81,67,.2);
+            margin-top: 22px;
+            padding-top: 20px;
+            font-size: 21px;
+            font-weight: 800;
+        }
+
+        .summary-total strong {
+            font-size: 25px;
+        }
+
+        .checkout-btn {
+            width: 100%;
+            margin-top: 25px;
+            text-decoration: none;
+        }
+
+        .continue-shopping {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            color: var(--brown-light);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .empty-cart {
+            text-align: center;
+            padding: 70px 20px;
+        }
+
+        .empty-cart .empty-icon {
+            font-size: 60px;
+            margin-bottom: 15px;
+        }
+
+        .empty-cart h2 {
+            margin-bottom: 10px;
+        }
+
+        .empty-cart p {
+            margin-bottom: 25px;
+        }
+
+        @media (max-width: 800px) {
+
+            .cart-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .cart-summary {
+                position: static;
+            }
+
+        }
+
+        @media (max-width: 550px) {
+
+            .cart-item {
+                grid-template-columns: 75px 1fr;
+            }
+
+            .cart-item-image {
+                width: 75px;
+                height: 75px;
+            }
+
+            .cart-item-right {
+                grid-column: 2;
+                text-align: left;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <main class="cart-page">
+
+        <section class="cart-heading">
+
+            <div class="little-label">
+                🧺 Your little collection
+            </div>
+
+            <h1>
+                Your <span>Cart</span> ♡
+            </h1>
+
+            <p>
+                Your handmade goodies are waiting for you.
+            </p>
+
+        </section>
+
+
+        <div id="cart-content"></div>
+
+    </main>
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+
+    const cartKey = "salvesCart";
+
+
+    function getCart() {
+
+        return JSON.parse(
+            localStorage.getItem(cartKey)
+        ) || [];
+
+    }
+
+
+    function saveCart(cart) {
+
+        localStorage.setItem(
+            cartKey,
+            JSON.stringify(cart)
+        );
+
+    }
+
+
+    function renderCart() {
+
+        const cart = getCart();
+
+        const container =
+            document.getElementById("cart-content");
+
+
+        /* EMPTY CART */
+
+        if (cart.length === 0) {
+
+            container.innerHTML = `
+
+                <div class="empty-cart">
+
+                    <div class="empty-icon">
+                        🧺
+                    </div>
+
+                    <h2>
+                        Your cart is empty ♡
+                    </h2>
+
+                    <p>
+                        Looks like your little yarn hugs
+                        haven't found a home yet.
+                    </p>
+
+                    <a href="shop.html"
+                       class="cute-button">
+
+                        Start Shopping ♡
+
+                    </a>
+
+                </div>
+
+            `;
+
+            return;
+
+        }
+
+
+        /* CALCULATE TOTALS */
+
+        let subtotal = 0;
+
+        let totalItems = 0;
+
+
+        cart.forEach(function (item) {
+
+            const quantity =
+                Number(item.quantity) || 1;
+
+            const price =
+                Number(item.price) || 0;
+
+
+            subtotal +=
+                price * quantity;
+
+
+            totalItems += quantity;
+
+        });
+
+
+        const shipping = 0;
+
+        const total =
+            subtotal + shipping;
+
+
+        /* CREATE PAGE */
+
+        container.innerHTML = `
+
+            <div class="cart-layout">
+
+
+                <section class="cart-items-box">
+
+                    <h2>
+                        Your Items 🧶
+                    </h2>
+
+                    <div id="cart-items"></div>
+
+                </section>
+
+
+                <aside class="cart-summary">
+
+                    <h2>
+                        Order Summary
+                    </h2>
+
+
+                    <div class="summary-line">
+
+                        <span>
+                            Items
+                        </span>
+
+                        <strong>
+                            ${totalItems}
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-line">
+
+                        <span>
+                            Subtotal
+                        </span>
+
+                        <strong>
+                            ${subtotal.toFixed(2)} OMR
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-line">
+
+                        <span>
+                            Shipping
+                        </span>
+
+                        <strong>
+                            Free ♡
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-total">
+
+                        <span>
+                            Total
+                        </span>
+
+                        <strong>
+                            ${total.toFixed(2)} OMR
+                        </strong>
+
+                    </div>
+
+
+                    <a href="checkout.html"
+                       class="cute-button checkout-btn">
+
+                        Proceed to Checkout ♡
+
+                    </a>
+
+
+                    <a href="shop.html"
+                       class="continue-shopping">
+
+                        ← Continue Shopping
+
+                    </a>
+
+                </aside>
+
+            </div>
+
+        `;
+
+
+        /* RENDER ITEMS */
+
+        const itemsContainer =
+            document.getElementById(
+                "cart-items"
+            );
+
+
+        cart.forEach(function (item) {
+
+            const quantity =
+                Number(item.quantity) || 1;
+
+
+            const price =
+                Number(item.price) || 0;
+
+
+            const itemTotal =
+                price * quantity;
+
+
+            const article =
+                document.createElement("article");
+
+
+            article.className =
+                "cart-item";
+
+
+            article.innerHTML = `
+
+                <div class="cart-item-image">
+
+                    <img
+                        src="${item.image}"
+                        alt="${item.name}"
+                    >
+
+                </div>
+
+
+                <div class="cart-item-info">
+
+                    <h3>
+                        ${item.name}
+                    </h3>
+
+                    <p>
+                        ${price.toFixed(2)} OMR each
+                    </p>
+
+
+                    <div class="quantity-controls">
+
+                        <button
+                            data-action="minus"
+                            data-id="${item.id}">
+                            −
+                        </button>
+
+                        <span class="quantity-number">
+                            ${quantity}
+                        </span>
+
+                        <button
+                            data-action="plus"
+                            data-id="${item.id}">
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="cart-item-right">
+
+                    <span class="cart-item-price">
+                        ${itemTotal.toFixed(2)} OMR
+                    </span>
+
+                    <button
+                        class="remove-item"
+                        data-id="${item.id}">
+
+                        Remove ♡
+
+                    </button>
+
+                </div>
+
+            `;
+
+
+            itemsContainer.appendChild(article);
+
+        });
+
+
+        /* PLUS / MINUS */
+
+        document
+            .querySelectorAll(
+                "[data-action]"
+            )
+            .forEach(function (button) {
+
+                button.addEventListener(
+                    "click",
+                    function () {
+
+                        const id =
+                            this.dataset.id;
+
+                        const action =
+                            this.dataset.action;
+
+
+                        const cart =
+                            getCart();
+
+
+                        const item =
+                            cart.find(
+                                product =>
+                                    String(product.id) ===
+                                    String(id)
+                            );
+
+
+                        if (!item) {
+                            return;
+                        }
+
+
+                        if (action === "plus") {
+
+                            item.quantity =
+                                (Number(item.quantity) || 1)
+                                + 1;
+
+                        }
+
+
+                        if (action === "minus") {
+
+                            item.quantity =
+                                (Number(item.quantity) || 1)
+                                - 1;
+
+
+                            if (item.quantity <= 0) {
+
+                                const index =
+                                    cart.indexOf(item);
+
+                                cart.splice(
+                                    index,
+                                    1
+                                );
+
+                            }
+
+                        }
+
+
+                        saveCart(cart);
+
+                        renderCart();
+
+                    }
+                );
+
+            });
+
+
+        /* REMOVE */
+
+        document
+            .querySelectorAll(
+                ".remove-item"
+            )
+            .forEach(function (button) {
+
+                button.addEventListener(
+                    "click",
+                    function () {
+
+                        const id =
+                            this.dataset.id;
+
+
+                        let cart =
+                            getCart();
+
+
+                        cart =
+                            cart.filter(
+                                item =>
+                                    String(item.id) !==
+                                    String(id)
+                            );
+
+
+                        saveCart(cart);
+
+                        renderCart();
+
+                    }
+                );
+
+            });
+
+    }
+
+
+    renderCart();
+
+});
+
+</script>
+
+
+</body>
+
+</html>
+```

@@ -1,0 +1,2558 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Arabic Calligraphy ♡ SAL’VES Studio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Caveat:wght@500;600;700&family=Dancing+Script:wght@500;600;700&family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background:
+        radial-gradient(circle at 8% 12%, #eee2f5 0 3px, transparent 4px),
+        radial-gradient(circle at 92% 30%, #e3d2ed 0 3px, transparent 4px),
+        #f8f1fa;
+    color: #5e4769;
+    font-family: "Quicksand", sans-serif;
+}
+
+
+/* =====================================================
+   ANNOUNCEMENT
+===================================================== */
+
+.announcement {
+    background: #684875;
+    color: white;
+    text-align: center;
+    padding: 9px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header {
+    background: #fffafd;
+    border-bottom: 2px solid #e5d5eb;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    max-width: 1250px;
+    min-height: 82px;
+    margin: auto;
+    padding: 12px 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    text-decoration: none;
+    color: #684875;
+
+    font-family: "Caveat", cursive;
+    font-size: 30px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.logo img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #654b70;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: #a276b4;
+}
+
+.cart-link {
+    background: #eee1f4;
+    padding: 9px 13px;
+    border-radius: 20px;
+}
+
+
+/* =====================================================
+   BACK
+===================================================== */
+
+.back-area {
+    width: min(1200px, 92%);
+    margin: 24px auto 0;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 9px 16px;
+
+    border-radius: 22px;
+
+    background: #fffafd;
+    border: 1px solid #dfcde6;
+
+    color: #684875;
+
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+
+    transition: .25s ease;
+}
+
+.back-link:hover {
+    transform: translateX(-4px);
+}
+
+
+/* =====================================================
+   PAGE HEADING
+===================================================== */
+
+.page-heading {
+    text-align: center;
+    padding: 45px 20px 35px;
+}
+
+.page-heading .small {
+    color: #9973a9;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.page-heading h1 {
+    margin: 7px 0;
+
+    font-family: "Dancing Script", cursive;
+    font-size: clamp(48px, 7vw, 76px);
+
+    color: #62456e;
+}
+
+.page-heading p {
+    max-width: 760px;
+    margin: 12px auto;
+
+    color: #806887;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+.customizer {
+    width: min(1200px, 92%);
+    margin: auto;
+    padding-bottom: 80px;
+}
+
+
+/* =====================================================
+   SECTION
+===================================================== */
+
+.custom-section {
+    background: #fffafd;
+
+    border: 1px solid #e1d1e7;
+
+    border-radius: 30px;
+
+    padding: 32px;
+
+    margin-bottom: 25px;
+
+    box-shadow:
+        0 10px 30px rgba(91, 62, 103, .07);
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.section-number {
+    display: inline-flex;
+
+    width: 35px;
+    height: 35px;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #eadcf2;
+    color: #684875;
+
+    font-weight: 700;
+    font-size: 14px;
+
+    margin-bottom: 8px;
+}
+
+.section-heading h2 {
+    margin: 0;
+
+    font-family: "Caveat", cursive;
+    font-size: 39px;
+
+    color: #684875;
+}
+
+.section-heading p {
+    margin: 5px auto 0;
+
+    color: #846b8b;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   CATEGORY CARDS
+===================================================== */
+
+.category-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+.category-card {
+    border: 2px solid #eadced;
+
+    background: #fcf8fd;
+
+    border-radius: 22px;
+
+    padding: 22px 15px;
+
+    cursor: pointer;
+
+    text-align: center;
+
+    transition: .25s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-4px);
+}
+
+.category-card.selected {
+    border-color: #8e65a0;
+
+    background: #f4eaf8;
+
+    box-shadow:
+        0 8px 20px rgba(103, 69, 116, .12);
+}
+
+.category-icon {
+    font-size: 32px;
+    margin-bottom: 9px;
+}
+
+.category-card h3 {
+    margin: 0;
+
+    font-family: "Caveat", cursive;
+
+    font-size: 26px;
+
+    color: #684875;
+}
+
+.category-card p {
+    margin: 5px 0 0;
+
+    color: #856e8b;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   PHRASE GALLERY
+===================================================== */
+
+.phrase-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 17px;
+}
+
+.phrase-card {
+    position: relative;
+
+    min-height: 155px;
+
+    border: 2px solid #eadced;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fffafd,
+            #f8f0fa
+        );
+
+    border-radius: 23px;
+
+    padding: 22px 17px;
+
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    transition: .25s ease;
+}
+
+.phrase-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 9px 22px rgba(93, 62, 106, .10);
+}
+
+.phrase-card.selected {
+    border-color: #80599a;
+
+    background: #f2e7f7;
+}
+
+.phrase-label {
+    color: #a078ae;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 10px;
+}
+
+.arabic {
+    font-family: "Amiri", serif;
+
+    direction: rtl;
+
+    font-size: 31px;
+
+    color: #5b3970;
+
+    line-height: 1.6;
+}
+
+.phrase-english {
+    margin-top: 6px;
+
+    color: #846b8b;
+
+    font-size: 11px;
+}
+
+
+/* =====================================================
+   CUSTOM PHRASE
+===================================================== */
+
+.custom-phrase-box {
+    margin-top: 18px;
+
+    padding: 18px;
+
+    background: #f7eff9;
+
+    border: 1px dashed #c9add5;
+
+    border-radius: 20px;
+
+    text-align: center;
+}
+
+.custom-phrase-box p {
+    margin: 0 0 10px;
+
+    color: #765a80;
+
+    font-size: 13px;
+}
+
+.custom-phrase-box textarea {
+    width: 100%;
+
+    min-height: 80px;
+
+    resize: vertical;
+
+    border: 1px solid #d9c5e1;
+
+    border-radius: 15px;
+
+    padding: 13px;
+
+    background: white;
+
+    font-family: "Amiri", serif;
+
+    font-size: 20px;
+
+    color: #5b3970;
+
+    outline: none;
+
+    text-align: right;
+}
+
+
+/* =====================================================
+   SHAPES
+===================================================== */
+
+.shape-grid {
+    display: grid;
+
+    grid-template-columns: repeat(6, 1fr);
+
+    gap: 15px;
+}
+
+.shape-card {
+    border: 2px solid #eadced;
+
+    background: #fcf8fd;
+
+    border-radius: 20px;
+
+    min-height: 125px;
+
+    padding: 15px 8px;
+
+    cursor: pointer;
+
+    text-align: center;
+
+    transition: .25s ease;
+}
+
+.shape-card:hover {
+    transform: translateY(-4px);
+}
+
+.shape-card.selected {
+    border-color: #80599a;
+
+    background: #f2e7f7;
+}
+
+.shape-visual {
+    width: 65px;
+    height: 65px;
+
+    margin: auto auto 9px;
+
+    border: 2px solid #8e68a0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #684875;
+
+    font-size: 25px;
+
+    background: #faf5fc;
+}
+
+.shape-circle {
+    border-radius: 50%;
+}
+
+.shape-heart {
+    border-radius: 45% 45% 45% 10%;
+    transform: rotate(-45deg);
+}
+
+.shape-heart span {
+    transform: rotate(45deg);
+}
+
+.shape-arch {
+    border-radius: 40px 40px 8px 8px;
+}
+
+.shape-square {
+    border-radius: 8px;
+}
+
+.shape-oval {
+    border-radius: 50%;
+    transform: scaleX(.75);
+}
+
+.shape-flower {
+    border-radius: 50%;
+    box-shadow:
+        17px 0 0 -8px #faf5fc,
+        -17px 0 0 -8px #faf5fc,
+        0 17px 0 -8px #faf5fc,
+        0 -17px 0 -8px #faf5fc;
+}
+
+.shape-name {
+    font-size: 12px;
+
+    font-weight: 700;
+
+    color: #6c5276;
+}
+
+
+/* =====================================================
+   ARTWORK COLOURS
+===================================================== */
+
+.art-colours {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    flex-wrap: wrap;
+}
+
+.art-colour {
+    width: 78px;
+
+    border: 2px solid transparent;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    text-align: center;
+
+    padding: 7px;
+
+    border-radius: 17px;
+
+    transition: .25s ease;
+}
+
+.art-colour:hover {
+    background: #f6edf9;
+}
+
+.art-colour.selected {
+    border-color: #80599a;
+
+    background: #f4eaf8;
+}
+
+.colour-circle {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+
+    margin: auto auto 7px;
+
+    border: 3px solid white;
+
+    box-shadow:
+        0 3px 10px rgba(0,0,0,.13);
+}
+
+.colour-name {
+    font-size: 11px;
+
+    font-weight: 700;
+
+    color: #765c80;
+}
+
+
+/* ART COLOURS */
+
+.art-purple {
+    background: #704c85;
+}
+
+.art-brown {
+    background: #624437;
+}
+
+.art-black {
+    background: #272327;
+}
+
+.art-gold {
+    background: #c49a43;
+}
+
+.art-white {
+    background: #ffffff;
+    border: 1px solid #d9ccd9;
+}
+
+
+/* =====================================================
+   PREVIEW
+===================================================== */
+
+.preview-area {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+}
+
+.preview-card {
+    background: #f8f0fa;
+
+    border: 1px solid #e1d1e7;
+
+    border-radius: 27px;
+
+    min-height: 350px;
+
+    padding: 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.preview-card h3 {
+    margin: 0 0 18px;
+
+    font-family: "Caveat", cursive;
+
+    font-size: 31px;
+
+    color: #684875;
+}
+
+.art-board {
+    width: 260px;
+    height: 260px;
+
+    background: #f7edf9;
+
+    border: 8px solid white;
+
+    box-shadow:
+        0 10px 25px rgba(77, 52, 87, .14);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 25px;
+
+    transition: .35s ease;
+}
+
+.art-board.circle {
+    border-radius: 50%;
+}
+
+.art-board.square {
+    border-radius: 15px;
+}
+
+.art-board.oval {
+    border-radius: 50%;
+    width: 300px;
+}
+
+.art-board.arch {
+    border-radius: 90px 90px 15px 15px;
+}
+
+.art-board.heart {
+    border-radius: 40% 40% 40% 10%;
+    transform: rotate(-45deg);
+}
+
+.art-board.heart .preview-text {
+    transform: rotate(45deg);
+}
+
+.art-board.flower {
+    border-radius: 45%;
+}
+
+.preview-text {
+    direction: rtl;
+
+    font-family: "Amiri", serif;
+
+    font-size: 34px;
+
+    line-height: 1.5;
+
+    color: #704c85;
+
+    transition: .3s ease;
+}
+
+.preview-note {
+    margin-top: 15px;
+
+    color: #816986;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   DETAILS
+===================================================== */
+
+.details-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 17px;
+}
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.form-group.full {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    color: #70547a;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+
+    border: 1px solid #ddcce4;
+
+    border-radius: 14px;
+
+    background: white;
+
+    padding: 13px;
+
+    outline: none;
+
+    font-family: "Quicksand", sans-serif;
+
+    color: #60466f;
+
+    font-size: 14px;
+}
+
+.form-group textarea {
+    min-height: 100px;
+
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #9d75ad;
+}
+
+
+/* =====================================================
+   ACTIONS
+===================================================== */
+
+.actions {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 25px;
+}
+
+.btn {
+    border: none;
+
+    border-radius: 25px;
+
+    padding: 13px 25px;
+
+    cursor: pointer;
+
+    font-family: "Quicksand", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition: .25s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-whatsapp {
+    background: #684875;
+
+    color: white;
+}
+
+.btn-email {
+    background: #eadcf2;
+
+    color: #684875;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 850px) {
+
+    .navbar {
+        flex-direction: column;
+        padding: 12px 15px;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .phrase-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .shape-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .preview-area {
+        grid-template-columns: 1fr;
+    }
+
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group.full {
+        grid-column: auto;
+    }
+
+}
+
+
+@media (max-width: 520px) {
+
+    .page-heading {
+        padding: 32px 15px 25px;
+    }
+
+    .page-heading h1 {
+        font-size: 45px;
+    }
+
+    .custom-section {
+        padding: 22px 15px;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .phrase-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .shape-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .art-board {
+        width: 220px;
+        height: 220px;
+    }
+
+    .art-board.oval {
+        width: 245px;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .logo img {
+        width: 48px;
+        height: 48px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- =====================================================
+     ANNOUNCEMENT
+===================================================== -->
+
+<div class="announcement">
+🧶 Handmade with love • Cozy little yarn hugs • 🤎
+</div>
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+<nav class="navbar">
+
+<a href="index.html" class="logo">
+
+<img
+src="./images/logo.png"
+alt="SAL’VES Studio logo"
+onerror="this.style.display='none';"
+
+>
+
+SAL’VES Studio
+
+</a>
+
+<div class="nav-links">
+
+<a href="index.html">Home</a>
+
+<a href="shop.html">Shop</a>
+
+<a href="customize.html">Customize</a>
+
+<a href="gallery.html">Gallery</a>
+
+<a href="about.html">About</a>
+
+<a href="contact.html">Contact</a>
+
+<a href="cart.html" class="cart-link">
+🛒 <span id="cart-count">0</span>
+</a>
+
+</div>
+
+</nav>
+
+</header>
+
+<!-- =====================================================
+     BACK
+===================================================== -->
+
+<div class="back-area">
+
+<a href="customize.html" class="back-link">
+← Back to Customize
+</a>
+
+</div>
+
+<!-- =====================================================
+     HEADING
+===================================================== -->
+
+<section class="page-heading">
+
+<div class="small">
+🖋️ Meaning • Beauty • Personal Expression
+</div>
+
+<h1>
+Create Your Calligraphy ♡
+</h1>
+
+<p>
+Choose meaningful words, phrases or verses, then select
+the shape and artwork style you imagine for your SAL’VES piece.
+</p>
+
+</section>
+
+<main class="customizer">
+
+<!-- =====================================================
+     STEP 1 — TYPE
+===================================================== -->
+
+<section class="custom-section">
+
+<div class="section-heading">
+
+<div class="section-number">
+1
+</div>
+
+<h2>
+What would you like to create? ♡
+</h2>
+
+<p>
+Start by choosing the kind of calligraphy you are looking for.
+</p>
+
+</div>
+
+<div class="category-grid">
+
+<button class="category-card selected"
+data-category="Names">
+
+<div class="category-icon">
+♡
+</div>
+
+<h3>
+Names
+</h3>
+
+<p>
+Beautiful Arabic names
+</p>
+
+</button>
+
+<button class="category-card"
+data-category="Duas">
+
+<div class="category-icon">
+🤲
+</div>
+
+<h3>
+Duas
+</h3>
+
+<p>
+Meaningful prayers
+</p>
+
+</button>
+
+<button class="category-card"
+data-category="Phrases">
+
+<div class="category-icon">
+✦
+</div>
+
+<h3>
+Phrases
+</h3>
+
+<p>
+Beautiful Arabic words
+</p>
+
+</button>
+
+<button class="category-card"
+data-category="Ayahs">
+
+<div class="category-icon">
+🕌
+</div>
+
+<h3>
+Ayahs
+</h3>
+
+<p>
+Qur’anic selections
+</p>
+
+</button>
+
+</div>
+
+</section>
+
+<!-- =====================================================
+     STEP 2 — PHRASES
+===================================================== -->
+
+<section class="custom-section">
+
+<div class="section-heading">
+
+<div class="section-number">
+2
+</div>
+
+<h2>
+Choose Your Words ♡
+</h2>
+
+<p>
+Pick a visual design below or enter your own wording.
+</p>
+
+</div>
+
+<div class="phrase-grid" id="phraseGrid">
+
+<button class="phrase-card selected"
+data-text="سلام"
+data-label="Peace">
+
+<div class="phrase-label">
+Beautiful Word
+</div>
+
+<div class="arabic">
+سلام
+</div>
+
+<div class="phrase-english">
+Peace
+</div>
+
+</button>
+
+<button class="phrase-card"
+data-text="حب"
+data-label="Love">
+
+<div class="phrase-label">
+Beautiful Word
+</div>
+
+<div class="arabic">
+حب
+</div>
+
+<div class="phrase-english">
+Love
+</div>
+
+</button>
+
+<button class="phrase-card"
+data-text="نور"
+data-label="Light">
+
+<div class="phrase-label">
+Beautiful Word
+</div>
+
+<div class="arabic">
+نور
+</div>
+
+<div class="phrase-english">
+Light
+</div>
+
+</button>
+
+<button class="phrase-card"
+data-text="بسم الله"
+data-label="Bismillah">
+
+<div class="phrase-label">
+Phrase
+</div>
+
+<div class="arabic">
+بسم الله
+</div>
+
+<div class="phrase-english">
+In the name of Allah
+</div>
+
+</button>
+
+<button class="phrase-card"
+data-text="الحمد لله"
+data-label="Alhamdulillah">
+
+<div class="phrase-label">
+Phrase
+</div>
+
+<div class="arabic">
+الحمد لله
+</div>
+
+<div class="phrase-english">
+Praise be to Allah
+</div>
+
+</button>
+
+<button class="phrase-card"
+data-text="ما شاء الله"
+data-label="MashaAllah">
+
+<div class="phrase-label">
+Phrase
+</div>
+
+<div class="arabic">
+ما شاء الله
+</div>
+
+<div class="phrase-english">
+MashaAllah
+</div>
+
+</button>
+
+<button class="phrase-card"
+data-text="سبحان الله"
+data-label="SubhanAllah">
+
+<div class="phrase-label">
+Phrase
+</div>
+
+<div class="arabic">
+سبحان الله
+</div>
+
+<div class="phrase-english">
+Glory be to Allah
+</div>
+
+</button>
+
+<button class="phrase-card"
+data-text="الله أكبر"
+data-label="Allahu Akbar">
+
+<div class="phrase-label">
+Phrase
+</div>
+
+<div class="arabic">
+الله أكبر
+</div>
+
+<div class="phrase-english">
+Allah is the Greatest
+</div>
+
+</button>
+
+<button class="phrase-card"
+data-text="أحبك"
+data-label="Custom Love">
+
+<div class="phrase-label">
+Expression
+</div>
+
+<div class="arabic">
+أحبك
+</div>
+
+<div class="phrase-english">
+I love you
+</div>
+
+</button>
+
+</div>
+
+<div class="custom-phrase-box">
+
+<p>
+Can't find what you want? Write your own wording below.
+</p>
+
+<textarea
+id="customPhrase"
+placeholder="اكتب هنا..."
+dir="rtl"
+></textarea>
+
+</div>
+
+</section>
+
+<!-- =====================================================
+     STEP 3 — SHAPE
+===================================================== -->
+
+<section class="custom-section">
+
+<div class="section-heading">
+
+<div class="section-number">
+3
+</div>
+
+<h2>
+Choose Your Shape ♡
+</h2>
+
+<p>
+Imagine how your calligraphy piece should be presented.
+</p>
+
+</div>
+
+<div class="shape-grid">
+
+<button class="shape-card selected"
+data-shape="circle">
+
+<div class="shape-visual shape-circle">
+◌
+</div>
+
+<div class="shape-name">
+Circle
+</div>
+
+</button>
+
+<button class="shape-card"
+data-shape="heart">
+
+<div class="shape-visual shape-heart">
+<span>♡</span>
+</div>
+
+<div class="shape-name">
+Heart
+</div>
+
+</button>
+
+<button class="shape-card"
+data-shape="square">
+
+<div class="shape-visual shape-square">
+□
+</div>
+
+<div class="shape-name">
+Square
+</div>
+
+</button>
+
+<button class="shape-card"
+data-shape="oval">
+
+<div class="shape-visual shape-oval">
+◯
+</div>
+
+<div class="shape-name">
+Oval
+</div>
+
+</button>
+
+<button class="shape-card"
+data-shape="arch">
+
+<div class="shape-visual shape-arch">
+⌒
+</div>
+
+<div class="shape-name">
+Arch
+</div>
+
+</button>
+
+<button class="shape-card"
+data-shape="flower">
+
+<div class="shape-visual shape-flower">
+✿
+</div>
+
+<div class="shape-name">
+Floral
+</div>
+
+</button>
+
+</div>
+
+</section>
+
+<!-- =====================================================
+     STEP 4 — ARTWORK COLOUR
+===================================================== -->
+
+<section class="custom-section">
+
+<div class="section-heading">
+
+<div class="section-number">
+4
+</div>
+
+<h2>
+Choose Your Artwork Colour ♡
+</h2>
+
+<p>
+The website remains in its purple theme — this is the colour
+of the actual calligraphy artwork.
+</p>
+
+</div>
+
+<div class="art-colours">
+
+<button class="art-colour selected"
+data-color="#704c85"
+data-name="Plum Purple">
+
+<div class="colour-circle art-purple"></div>
+
+<div class="colour-name">
+Plum Purple
+</div>
+
+</button>
+
+<button class="art-colour"
+data-color="#624437"
+data-name="Coffee Brown">
+
+<div class="colour-circle art-brown"></div>
+
+<div class="colour-name">
+Coffee Brown
+</div>
+
+</button>
+
+<button class="art-colour"
+data-color="#272327"
+data-name="Black">
+
+<div class="colour-circle art-black"></div>
+
+<div class="colour-name">
+Black
+</div>
+
+</button>
+
+<button class="art-colour"
+data-color="#c49a43"
+data-name="Gold">
+
+<div class="colour-circle art-gold"></div>
+
+<div class="colour-name">
+Gold
+</div>
+
+</button>
+
+<button class="art-colour"
+data-color="#ffffff"
+data-name="White">
+
+<div class="colour-circle art-white"></div>
+
+<div class="colour-name">
+White
+</div>
+
+</button>
+
+</div>
+
+</section>
+
+<!-- =====================================================
+     STEP 5 — PREVIEW
+===================================================== -->
+
+<section class="custom-section">
+
+<div class="section-heading">
+
+<div class="section-number">
+5
+</div>
+
+<h2>
+See Your Idea ♡
+</h2>
+
+<p>
+This preview changes as you choose your wording, shape and colour.
+</p>
+
+</div>
+
+<div class="preview-area">
+
+<div class="preview-card">
+
+<h3>
+Your Calligraphy
+</h3>
+
+<div
+class="art-board circle"
+id="artBoard"
+>
+
+<div
+class="preview-text"
+id="previewText"
+>
+سلام
+</div>
+
+</div>
+
+<div class="preview-note">
+
+<strong id="previewPhrase">
+Peace
+</strong>
+
+<br>
+
+Shape: <strong id="previewShape">
+Circle </strong>
+
+<br>
+
+Colour: <strong id="previewColour">
+Plum Purple </strong>
+
+</div>
+
+</div>
+
+<div class="preview-card">
+
+<h3>
+Your Design
+</h3>
+
+<div class="arabic" id="largePreviewText">
+سلام
+</div>
+
+<div class="preview-note">
+
+Your final design can be discussed with
+SAL’VES Studio before production.
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =====================================================
+     STEP 6 — DETAILS
+===================================================== -->
+
+<section class="custom-section">
+
+<div class="section-heading">
+
+<div class="section-number">
+6
+</div>
+
+<h2>
+Tell Us About Your Piece ♡
+</h2>
+
+<p>
+Send us the details so we can discuss your final design.
+</p>
+
+</div>
+
+<div class="details-grid">
+
+<div class="form-group">
+
+<label>
+Your Name
+</label>
+
+<input
+type="text"
+id="customerName"
+placeholder="Your name"
+
+>
+
+</div>
+
+<div class="form-group">
+
+<label>
+WhatsApp / Contact
+</label>
+
+<input
+type="text"
+id="customerContact"
+placeholder="Your contact"
+
+>
+
+</div>
+
+<div class="form-group">
+
+<label>
+Preferred Size
+</label>
+
+<select id="sizeChoice">
+
+<option>Small</option>
+<option>Medium</option>
+<option>Large</option>
+<option>Not sure yet</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>
+Purpose
+</label>
+
+<select id="purposeChoice">
+
+<option>For myself</option>
+<option>Gift</option>
+<option>Home decor</option>
+<option>Special occasion</option>
+<option>Not sure yet</option>
+
+</select>
+
+</div>
+
+<div class="form-group full">
+
+<label>
+Extra Details
+</label>
+
+<textarea
+id="extraDetails"
+placeholder="Tell us anything else you would like..."
+></textarea>
+
+</div>
+
+</div>
+
+<div class="actions">
+
+<button
+class="btn btn-whatsapp"
+onclick="sendWhatsApp()"
+
+>
+
+Send via WhatsApp ♡ </button>
+
+<button
+class="btn btn-email"
+onclick="sendEmail()"
+
+>
+
+Send by Email </button>
+
+</div>
+
+</section>
+
+</main>
+
+<script>
+
+/* =====================================================
+   DATA
+===================================================== */
+
+const categoryData = {
+
+    Names: [
+        {
+            text: "مريم",
+            label: "Maryam"
+        },
+        {
+            text: "محمد",
+            label: "Muhammad"
+        },
+        {
+            text: "عائشة",
+            label: "Aisha"
+        },
+        {
+            text: "فاطمة",
+            label: "Fatimah"
+        },
+        {
+            text: "نور",
+            label: "Noor"
+        },
+        {
+            text: "ليان",
+            label: "Layan"
+        }
+    ],
+
+    Duas: [
+        {
+            text: "رَبِّ زِدْنِي عِلْمًا",
+            label: "Rabbi Zidni Ilma"
+        },
+        {
+            text: "رَبِّ اشْرَحْ لِي صَدْرِي",
+            label: "Rabbi Ishrah Li Sadri"
+        },
+        {
+            text: "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً",
+            label: "Our Lord, give us good"
+        },
+        {
+            text: "رَبِّ اغْفِرْ لِي",
+            label: "Rabbi ighfir li"
+        },
+        {
+            text: "اللَّهُمَّ بَارِكْ لِي",
+            label: "Allahumma barik li"
+        },
+        {
+            text: "حَسْبِيَ اللَّهُ",
+            label: "HasbiyAllah"
+        }
+    ],
+
+    Phrases: [
+        {
+            text: "بسم الله",
+            label: "Bismillah"
+        },
+        {
+            text: "الحمد لله",
+            label: "Alhamdulillah"
+        },
+        {
+            text: "سبحان الله",
+            label: "SubhanAllah"
+        },
+        {
+            text: "الله أكبر",
+            label: "Allahu Akbar"
+        },
+        {
+            text: "ما شاء الله",
+            label: "MashaAllah"
+        },
+        {
+            text: "إن شاء الله",
+            label: "InshaAllah"
+        },
+        {
+            text: "السلام عليكم",
+            label: "Assalamu Alaikum"
+        },
+        {
+            text: "نور على نور",
+            label: "Light upon Light"
+        },
+        {
+            text: "حب",
+            label: "Love"
+        }
+    ],
+
+    Ayahs: [
+        {
+            text: "إِنَّ مَعَ الْعُسْرِ يُسْرًا",
+            label: "Ash-Sharh 94:6"
+        },
+        {
+            text: "فَإِنَّ مَعَ الْعُسْرِ يُسْرًا",
+            label: "Ash-Sharh 94:5"
+        },
+        {
+            text: "وَقُل رَّبِّ زِدْنِي عِلْمًا",
+            label: "Ta-Ha 20:114"
+        },
+        {
+            text: "إِنَّ اللَّهَ مَعَ الصَّابِرِينَ",
+            label: "Al-Baqarah 2:153"
+        },
+        {
+            text: "وَهُوَ مَعَكُمْ أَيْنَ مَا كُنتُمْ",
+            label: "Al-Hadid 57:4"
+        },
+        {
+            text: "وَمَن يَتَوَكَّلْ عَلَى اللَّهِ فَهُوَ حَسْبُهُ",
+            label: "At-Talaq 65:3"
+        }
+    ]
+
+};
+
+
+/* =====================================================
+   CURRENT SELECTIONS
+===================================================== */
+
+let selectedCategory = "Names";
+
+let selectedPhrase = "مريم";
+
+let selectedPhraseName = "Maryam";
+
+let selectedShape = "circle";
+
+let selectedShapeName = "Circle";
+
+let selectedColour = "#704c85";
+
+let selectedColourName = "Plum Purple";
+
+
+/* =====================================================
+   ELEMENTS
+===================================================== */
+
+const categoryCards =
+    document.querySelectorAll(".category-card");
+
+const phraseGrid =
+    document.getElementById("phraseGrid");
+
+const previewText =
+    document.getElementById("previewText");
+
+const largePreviewText =
+    document.getElementById("largePreviewText");
+
+const previewPhrase =
+    document.getElementById("previewPhrase");
+
+const customPhrase =
+    document.getElementById("customPhrase");
+
+const shapeCards =
+    document.querySelectorAll(".shape-card");
+
+const artBoard =
+    document.getElementById("artBoard");
+
+const previewShape =
+    document.getElementById("previewShape");
+
+const artColours =
+    document.querySelectorAll(".art-colour");
+
+const previewColour =
+    document.getElementById("previewColour");
+
+
+/* =====================================================
+   LOAD PHRASE CARDS
+===================================================== */
+
+function loadCategory(category) {
+
+    selectedCategory = category;
+
+    const items =
+        categoryData[category];
+
+    phraseGrid.innerHTML = "";
+
+    items.forEach(function(item, index) {
+
+        const button =
+            document.createElement("button");
+
+        button.className =
+            "phrase-card" +
+            (index === 0 ? " selected" : "");
+
+        button.dataset.text =
+            item.text;
+
+        button.dataset.label =
+            item.label;
+
+
+        let labelText = "Selection";
+
+        if (category === "Names") {
+            labelText = "Name";
+        }
+
+        if (category === "Duas") {
+            labelText = "Dua";
+        }
+
+        if (category === "Phrases") {
+            labelText = "Phrase";
+        }
+
+        if (category === "Ayahs") {
+            labelText = "Ayah";
+        }
+
+
+        button.innerHTML = `
+
+            <div class="phrase-label">
+                ${labelText}
+            </div>
+
+            <div class="arabic">
+                ${item.text}
+            </div>
+
+            <div class="phrase-english">
+                ${item.label}
+            </div>
+
+        `;
+
+
+        button.addEventListener(
+            "click",
+            function() {
+
+                selectPhrase(
+                    button
+                );
+
+            }
+        );
+
+
+        phraseGrid.appendChild(button);
+
+    });
+
+
+    /* Select first item */
+
+    const firstCard =
+        phraseGrid.querySelector(".phrase-card");
+
+    if (firstCard) {
+
+        selectPhrase(firstCard);
+
+    }
+
+}
+
+
+/* =====================================================
+   SELECT PHRASE
+===================================================== */
+
+function selectPhrase(card) {
+
+    document
+        .querySelectorAll("#phraseGrid .phrase-card")
+        .forEach(function(item) {
+
+            item.classList.remove("selected");
+
+        });
+
+
+    card.classList.add("selected");
+
+
+    selectedPhrase =
+        card.dataset.text;
+
+
+    selectedPhraseName =
+        card.dataset.label;
+
+
+    previewText.textContent =
+        selectedPhrase;
+
+
+    largePreviewText.textContent =
+        selectedPhrase;
+
+
+    previewPhrase.textContent =
+        selectedPhraseName;
+
+
+    /* Clear custom wording */
+
+    customPhrase.value = "";
+
+}
+
+
+/* =====================================================
+   CATEGORY BUTTONS
+===================================================== */
+
+categoryCards.forEach(function(card) {
+
+    card.addEventListener(
+        "click",
+        function() {
+
+            categoryCards.forEach(
+                function(item) {
+
+                    item.classList.remove(
+                        "selected"
+                    );
+
+                }
+            );
+
+
+            card.classList.add(
+                "selected"
+            );
+
+
+            const category =
+                card.dataset.category;
+
+
+            loadCategory(
+                category
+            );
+
+        }
+    );
+
+});
+
+
+/* =====================================================
+   CUSTOM PHRASE
+===================================================== */
+
+customPhrase.addEventListener(
+    "input",
+    function() {
+
+        const value =
+            customPhrase.value.trim();
+
+
+        if (value) {
+
+            document
+                .querySelectorAll(
+                    "#phraseGrid .phrase-card"
+                )
+                .forEach(
+                    function(item) {
+
+                        item.classList.remove(
+                            "selected"
+                        );
+
+                    }
+                );
+
+
+            selectedPhrase =
+                value;
+
+
+            selectedPhraseName =
+                "Custom wording";
+
+
+            previewText.textContent =
+                value;
+
+
+            largePreviewText.textContent =
+                value;
+
+
+            previewPhrase.textContent =
+                "Custom wording";
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+   SHAPE SELECTION
+===================================================== */
+
+shapeCards.forEach(function(card) {
+
+    card.addEventListener(
+        "click",
+        function() {
+
+            shapeCards.forEach(
+                function(item) {
+
+                    item.classList.remove(
+                        "selected"
+                    );
+
+                }
+            );
+
+
+            card.classList.add(
+                "selected"
+            );
+
+
+            selectedShape =
+                card.dataset.shape;
+
+
+            selectedShapeName =
+                card.querySelector(
+                    ".shape-name"
+                ).textContent;
+
+
+            artBoard.className =
+                "art-board " +
+                selectedShape;
+
+
+            previewShape.textContent =
+                selectedShapeName;
+
+        }
+    );
+
+});
+
+
+/* =====================================================
+   ARTWORK COLOUR
+===================================================== */
+
+artColours.forEach(function(button) {
+
+    button.addEventListener(
+        "click",
+        function() {
+
+            artColours.forEach(
+                function(item) {
+
+                    item.classList.remove(
+                        "selected"
+                    );
+
+                }
+            );
+
+
+            button.classList.add(
+                "selected"
+            );
+
+
+            selectedColour =
+                button.dataset.color;
+
+
+            selectedColourName =
+                button.dataset.name;
+
+
+            previewText.style.color =
+                selectedColour;
+
+
+            largePreviewText.style.color =
+                selectedColour;
+
+
+            previewColour.textContent =
+                selectedColourName;
+
+        }
+    );
+
+});
+
+
+/* =====================================================
+   WHATSAPP
+===================================================== */
+
+function sendWhatsApp() {
+
+    const name =
+        document.getElementById(
+            "customerName"
+        ).value;
+
+    const contact =
+        document.getElementById(
+            "customerContact"
+        ).value;
+
+    const size =
+        document.getElementById(
+            "sizeChoice"
+        ).value;
+
+    const purpose =
+        document.getElementById(
+            "purposeChoice"
+        ).value;
+
+    const extra =
+        document.getElementById(
+            "extraDetails"
+        ).value;
+
+
+    const message =
+`SAL’VES Studio — Arabic Calligraphy Customization ♡
+
+Name: ${name}
+
+Contact: ${contact}
+
+Category: ${selectedCategory}
+
+Wording:
+${selectedPhrase}
+
+Label:
+${selectedPhraseName}
+
+Shape:
+${selectedShapeName}
+
+Artwork colour:
+${selectedColourName}
+
+Preferred size:
+${size}
+
+Purpose:
+${purpose}
+
+Extra details:
+${extra}`;
+
+
+    const number =
+        "96893853607";
+
+
+    const url =
+        "https://wa.me/" +
+        number +
+        "?text=" +
+        encodeURIComponent(message);
+
+
+    window.open(
+        url,
+        "_blank"
+    );
+
+}
+
+
+/* =====================================================
+   EMAIL
+===================================================== */
+
+function sendEmail() {
+
+    const name =
+        document.getElementById(
+            "customerName"
+        ).value;
+
+    const contact =
+        document.getElementById(
+            "customerContact"
+        ).value;
+
+    const size =
+        document.getElementById(
+            "sizeChoice"
+        ).value;
+
+    const purpose =
+        document.getElementById(
+            "purposeChoice"
+        ).value;
+
+    const extra =
+        document.getElementById(
+            "extraDetails"
+        ).value;
+
+
+    const subject =
+        "SAL’VES Studio — Arabic Calligraphy Customization";
+
+
+    const body =
+`SAL’VES Studio — Arabic Calligraphy Customization
+
+Name: ${name}
+
+Contact: ${contact}
+
+Category: ${selectedCategory}
+
+Wording:
+${selectedPhrase}
+
+Label:
+${selectedPhraseName}
+
+Shape:
+${selectedShapeName}
+
+Artwork colour:
+${selectedColourName}
+
+Preferred size:
+${size}
+
+Purpose:
+${purpose}
+
+Extra details:
+${extra}`;
+
+
+    window.location.href =
+        "mailto:salwamaryam.th@gmail.com" +
+        "?subject=" +
+        encodeURIComponent(subject) +
+        "&body=" +
+        encodeURIComponent(body);
+
+}
+
+
+/* =====================================================
+   CART COUNT
+===================================================== */
+
+function updateCartCount() {
+
+    const cartCount =
+        document.getElementById(
+            "cart-count"
+        );
+
+    if (!cartCount) return;
+
+
+    let cart = [];
+
+
+    try {
+
+        cart =
+            JSON.parse(
+                localStorage.getItem(
+                    "salves_cart"
+                ) || "[]"
+            );
+
+
+        if (!cart.length) {
+
+            cart =
+                JSON.parse(
+                    localStorage.getItem(
+                        "salvesCart"
+                    ) || "[]"
+                );
+
+        }
+
+    } catch (error) {
+
+        cart = [];
+
+    }
+
+
+    let total = 0;
+
+
+    cart.forEach(
+        function(item) {
+
+            total += Number(
+                item.quantity || 1
+            );
+
+        }
+    );
+
+
+    cartCount.textContent =
+        total;
+
+}
+
+
+/* =====================================================
+   START WITH NAMES
+===================================================== */
+
+loadCategory("Names");
+
+updateCartCount();
+
+</script>
+</body>
+
+</html>

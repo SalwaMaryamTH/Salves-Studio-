@@ -1,0 +1,1657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pipe-Cleaner Art | SAL’VES Studio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Dancing+Script:wght@500;600;700&family=Fredoka:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    background:
+        radial-gradient(circle at top left,#eaf8ff 0,#f8fcff 35%,#ffffff 75%);
+    color:#31576b;
+    font-family:"Quicksand",sans-serif;
+    min-height:100vh;
+}
+
+/* ANNOUNCEMENT */
+
+.announcement{
+    background:#315f76;
+    color:white;
+    text-align:center;
+    padding:10px 15px;
+    font-size:14px;
+    letter-spacing:.3px;
+}
+
+/* HEADER */
+
+header{
+    width:100%;
+    background:rgba(255,255,255,.94);
+    border-bottom:1px solid #d8ebf3;
+    position:sticky;
+    top:0;
+    z-index:100;
+    backdrop-filter:blur(10px);
+}
+
+.navbar{
+    max-width:1250px;
+    margin:auto;
+    min-height:82px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:12px 25px;
+    gap:25px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+}
+
+.logo img{
+    width:125px;
+    max-height:62px;
+    object-fit:contain;
+}
+
+nav{
+    display:flex;
+    align-items:center;
+    gap:25px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+nav a{
+    text-decoration:none;
+    color:#31576b;
+    font-weight:600;
+    transition:.25s;
+}
+
+nav a:hover{
+    color:#5e9db9;
+}
+
+.cart-link{
+    position:relative;
+    font-size:22px;
+}
+
+.cart-badge{
+    position:absolute;
+    top:-10px;
+    right:-13px;
+    background:#6ea8c1;
+    color:white;
+    min-width:19px;
+    height:19px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:11px;
+    font-weight:700;
+}
+
+/* HERO */
+
+.hero{
+    text-align:center;
+    padding:55px 20px 30px;
+}
+
+.hero h1{
+    font-family:"Dancing Script",cursive;
+    font-size:54px;
+    color:#315f76;
+    margin-bottom:8px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    font-size:16px;
+    line-height:1.7;
+    color:#648494;
+}
+
+/* MAIN */
+
+.customizer{
+    width:min(1180px,94%);
+    margin:25px auto 70px;
+}
+
+/* STEP */
+
+.step{
+    background:rgba(255,255,255,.9);
+    border:1px solid #d6eaf2;
+    border-radius:28px;
+    padding:28px;
+    margin-bottom:25px;
+    box-shadow:0 12px 35px rgba(69,120,145,.09);
+}
+
+.step-title{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:20px;
+}
+
+.step-number{
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    background:#dff3fb;
+    color:#315f76;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:700;
+}
+
+.step-title h2{
+    font-family:"Caveat",cursive;
+    font-size:32px;
+    color:#315f76;
+}
+
+/* CATEGORY */
+
+.category-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:15px;
+}
+
+.category-btn{
+    border:2px solid #d6eaf2;
+    background:#f8fdff;
+    border-radius:20px;
+    padding:18px 10px;
+    cursor:pointer;
+    color:#315f76;
+    font-family:"Quicksand",sans-serif;
+    font-weight:700;
+    transition:.25s;
+}
+
+.category-btn .emoji{
+    display:block;
+    font-size:34px;
+    margin-bottom:8px;
+}
+
+.category-btn:hover{
+    transform:translateY(-3px);
+    border-color:#86bdd2;
+}
+
+.category-btn.active{
+    background:#dff3fb;
+    border-color:#5e9db9;
+    box-shadow:0 7px 18px rgba(94,157,185,.16);
+}
+
+/* DESIGNS */
+
+.design-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.design-card{
+    background:#fbfeff;
+    border:2px solid #deedf3;
+    border-radius:22px;
+    overflow:hidden;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.design-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 25px rgba(69,120,145,.12);
+}
+
+.design-card.active{
+    border-color:#5e9db9;
+    box-shadow:0 0 0 3px #dff3fb;
+}
+
+.design-image{
+    height:150px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(135deg,#effaff,#dff3fb);
+    font-size:70px;
+}
+
+.design-info{
+    padding:14px;
+    text-align:center;
+}
+
+.design-info strong{
+    display:block;
+    color:#315f76;
+    margin-bottom:4px;
+}
+
+.design-info span{
+    font-size:12px;
+    color:#71909d;
+}
+
+/* COLOURS */
+
+.colour-grid{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.colour-option{
+    border:2px solid transparent;
+    background:white;
+    border-radius:18px;
+    padding:9px;
+    cursor:pointer;
+    text-align:center;
+    transition:.2s;
+}
+
+.colour-option:hover{
+    transform:translateY(-2px);
+}
+
+.colour-option.active{
+    border-color:#4e8ca7;
+    box-shadow:0 5px 16px rgba(78,140,167,.16);
+}
+
+.colour-circle{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    margin:auto auto 6px;
+    border:2px solid rgba(0,0,0,.08);
+}
+
+.colour-option span{
+    font-size:12px;
+    font-weight:600;
+    color:#547484;
+}
+
+/* SIZE */
+
+.size-grid{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+}
+
+.size-btn{
+    padding:14px 24px;
+    border:2px solid #d7eaf2;
+    background:white;
+    border-radius:18px;
+    color:#315f76;
+    font-family:"Quicksand",sans-serif;
+    font-weight:700;
+    cursor:pointer;
+}
+
+.size-btn.active,
+.size-btn:hover{
+    background:#e3f5fb;
+    border-color:#6da9bf;
+}
+
+/* TWO COLUMN PREVIEW */
+
+.preview-area{
+    display:grid;
+    grid-template-columns:1.05fr .95fr;
+    gap:25px;
+    align-items:stretch;
+}
+
+.preview-box{
+    min-height:480px;
+    border-radius:30px;
+    background:
+        radial-gradient(circle at center,#ffffff 0,#effaff 70%,#dff3fb 100%);
+    border:1px solid #d4eaf2;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    overflow:hidden;
+}
+
+.preview-box::before,
+.preview-box::after{
+    content:"";
+    position:absolute;
+    border-radius:50%;
+    border:1px solid rgba(95,166,195,.13);
+}
+
+.preview-box::before{
+    width:340px;
+    height:340px;
+}
+
+.preview-box::after{
+    width:500px;
+    height:500px;
+}
+
+.preview-art{
+    position:relative;
+    z-index:2;
+    text-align:center;
+}
+
+.preview-art .big-emoji{
+    font-size:150px;
+    display:block;
+    filter:drop-shadow(0 12px 12px rgba(57,105,125,.12));
+}
+
+.preview-art h3{
+    font-family:"Caveat",cursive;
+    font-size:34px;
+    color:#315f76;
+    margin-top:8px;
+}
+
+.preview-art p{
+    color:#7895a1;
+    margin-top:3px;
+}
+
+.preview-label{
+    position:absolute;
+    top:20px;
+    left:20px;
+    background:white;
+    border:1px solid #d7eaf2;
+    padding:8px 14px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:700;
+    color:#52798a;
+}
+
+/* SUMMARY */
+
+.summary{
+    background:#f8fdff;
+    border:1px solid #d6eaf2;
+    border-radius:28px;
+    padding:28px;
+}
+
+.summary h2{
+    font-family:"Caveat",cursive;
+    font-size:35px;
+    color:#315f76;
+    margin-bottom:20px;
+}
+
+.summary-row{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    padding:13px 0;
+    border-bottom:1px dashed #d3e7ef;
+}
+
+.summary-row:last-of-type{
+    border-bottom:none;
+}
+
+.summary-row span:first-child{
+    color:#77919d;
+}
+
+.summary-row span:last-child{
+    color:#315f76;
+    font-weight:700;
+    text-align:right;
+}
+
+/* FORM */
+
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+}
+
+.field{
+    display:flex;
+    flex-direction:column;
+    gap:7px;
+}
+
+.field.full{
+    grid-column:1/-1;
+}
+
+.field label{
+    color:#527484;
+    font-weight:700;
+    font-size:14px;
+}
+
+.field input,
+.field textarea,
+.field select{
+    width:100%;
+    border:1px solid #d3e8f0;
+    background:white;
+    border-radius:15px;
+    padding:13px 15px;
+    font-family:"Quicksand",sans-serif;
+    color:#31576b;
+    outline:none;
+}
+
+.field input:focus,
+.field textarea:focus,
+.field select:focus{
+    border-color:#6ca9bf;
+    box-shadow:0 0 0 3px #e9f7fc;
+}
+
+.field textarea{
+    min-height:105px;
+    resize:vertical;
+}
+
+/* BUTTONS */
+
+.action-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+    margin-top:22px;
+}
+
+.action-btn{
+    flex:1;
+    min-width:220px;
+    padding:16px 22px;
+    border:none;
+    border-radius:18px;
+    cursor:pointer;
+    font-family:"Quicksand",sans-serif;
+    font-weight:700;
+    font-size:15px;
+    transition:.25s;
+}
+
+.action-btn:hover{
+    transform:translateY(-2px);
+}
+
+.whatsapp{
+    background:#dff5ea;
+    color:#267653;
+}
+
+.email{
+    background:#dff3fb;
+    color:#315f76;
+}
+
+.notice{
+    margin-top:15px;
+    padding:13px 15px;
+    background:#eef9fd;
+    border-radius:15px;
+    color:#648492;
+    font-size:13px;
+    line-height:1.6;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .category-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .design-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .preview-area{
+        grid-template-columns:1fr;
+    }
+
+    .navbar{
+        flex-direction:column;
+        padding:15px;
+    }
+
+    nav{
+        gap:15px;
+    }
+}
+
+@media(max-width:600px){
+
+    .hero h1{
+        font-size:43px;
+    }
+
+    .hero{
+        padding-top:35px;
+    }
+
+    .step{
+        padding:20px;
+        border-radius:22px;
+    }
+
+    .category-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .design-grid{
+        grid-template-columns:1fr 1fr;
+        gap:10px;
+    }
+
+    .design-image{
+        height:115px;
+        font-size:52px;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+    .field.full{
+        grid-column:auto;
+    }
+
+    .preview-box{
+        min-height:390px;
+    }
+
+    .preview-art .big-emoji{
+        font-size:110px;
+    }
+
+    .summary-row{
+        font-size:13px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="announcement">
+    🧶 Handmade with love • Cozy little yarn hugs • 🤎
+</div>
+
+<header>
+    <div class="navbar">
+
+        <a href="index.html" class="logo">
+            <img src="./images/logo.png"
+                 alt="SAL’VES Studio logo"
+                 onerror="this.style.display='none';">
+        </a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="customize.html">Customize</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+
+            <a href="cart.html" class="cart-link">
+                🛒
+                <span class="cart-badge" id="cart-count">0</span>
+            </a>
+        </nav>
+
+    </div>
+</header>
+
+
+<section class="hero">
+
+    <h1>🩵 Create Your Pipe-Cleaner Art</h1>
+
+    <p>
+        Twist, shape and choose your colours to create a cute little
+        SAL’VES piece made especially for you ♡
+    </p>
+
+</section>
+
+
+<main class="customizer">
+
+
+    <!-- STEP 1 -->
+
+    <section class="step">
+
+        <div class="step-title">
+            <div class="step-number">1</div>
+            <h2>What would you like to create?</h2>
+        </div>
+
+        <div class="category-grid">
+
+            <button class="category-btn active" data-category="Flowers">
+                <span class="emoji">🌷</span>
+                Flowers
+            </button>
+
+            <button class="category-btn" data-category="Animals">
+                <span class="emoji">🐰</span>
+                Animals
+            </button>
+
+            <button class="category-btn" data-category="Characters">
+                <span class="emoji">🧸</span>
+                Characters
+            </button>
+
+            <button class="category-btn" data-category="Keychains">
+                <span class="emoji">🔑</span>
+                Keychains
+            </button>
+
+            <button class="category-btn" data-category="Decor">
+                <span class="emoji">✨</span>
+                Decor
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- STEP 2 -->
+
+    <section class="step">
+
+        <div class="step-title">
+            <div class="step-number">2</div>
+            <h2>Choose your design</h2>
+        </div>
+
+        <div class="design-grid" id="design-grid"></div>
+
+    </section>
+
+
+    <!-- STEP 3 -->
+
+    <section class="step">
+
+        <div class="step-title">
+            <div class="step-number">3</div>
+            <h2>Choose your artwork colours</h2>
+        </div>
+
+        <div class="colour-grid">
+
+            <button class="colour-option active" data-colour="Pastel Blue">
+                <div class="colour-circle" style="background:#a9d9ea;"></div>
+                <span>Pastel Blue</span>
+            </button>
+
+            <button class="colour-option" data-colour="Baby Pink">
+                <div class="colour-circle" style="background:#f5bfd0;"></div>
+                <span>Baby Pink</span>
+            </button>
+
+            <button class="colour-option" data-colour="Lavender">
+                <div class="colour-circle" style="background:#cdbce8;"></div>
+                <span>Lavender</span>
+            </button>
+
+            <button class="colour-option" data-colour="Butter Yellow">
+                <div class="colour-circle" style="background:#f7df8b;"></div>
+                <span>Butter Yellow</span>
+            </button>
+
+            <button class="colour-option" data-colour="Mint">
+                <div class="colour-circle" style="background:#a9d9c3;"></div>
+                <span>Mint</span>
+            </button>
+
+            <button class="colour-option" data-colour="White">
+                <div class="colour-circle" style="background:#ffffff;"></div>
+                <span>White</span>
+            </button>
+
+            <button class="colour-option" data-colour="Red">
+                <div class="colour-circle" style="background:#d96d78;"></div>
+                <span>Red</span>
+            </button>
+
+            <button class="colour-option" data-colour="Custom Mix">
+                <div class="colour-circle"
+                     style="background:linear-gradient(135deg,#a9d9ea,#f5bfd0,#f7df8b,#cdbce8);">
+                </div>
+                <span>Mixed</span>
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- STEP 4 -->
+
+    <section class="step">
+
+        <div class="step-title">
+            <div class="step-number">4</div>
+            <h2>Choose your size</h2>
+        </div>
+
+        <div class="size-grid">
+
+            <button class="size-btn active" data-size="Mini">
+                Mini
+            </button>
+
+            <button class="size-btn" data-size="Small">
+                Small
+            </button>
+
+            <button class="size-btn" data-size="Medium">
+                Medium
+            </button>
+
+            <button class="size-btn" data-size="Large">
+                Large
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- PREVIEW + SUMMARY -->
+
+    <section class="preview-area">
+
+        <div class="preview-box">
+
+            <div class="preview-label">
+                LIVE PREVIEW ♡
+            </div>
+
+            <div class="preview-art">
+
+                <span class="big-emoji" id="preview-emoji">
+                    🌷
+                </span>
+
+                <h3 id="preview-title">
+                    Tulip
+                </h3>
+
+                <p id="preview-colour">
+                    Pastel Blue
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="summary">
+
+            <h2>Your little creation ♡</h2>
+
+            <div class="summary-row">
+                <span>Category</span>
+                <span id="summary-category">Flowers</span>
+            </div>
+
+            <div class="summary-row">
+                <span>Design</span>
+                <span id="summary-design">Tulip</span>
+            </div>
+
+            <div class="summary-row">
+                <span>Artwork colour</span>
+                <span id="summary-colour">Pastel Blue</span>
+            </div>
+
+            <div class="summary-row">
+                <span>Size</span>
+                <span id="summary-size">Mini</span>
+            </div>
+
+            <div class="notice">
+                ✨ This is a customization preview. The final handmade
+                piece may have tiny handmade differences, making every
+                SAL’VES creation unique.
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CUSTOMER DETAILS -->
+
+    <section class="step" style="margin-top:25px;">
+
+        <div class="step-title">
+            <div class="step-number">5</div>
+            <h2>Tell us about your order</h2>
+        </div>
+
+        <div class="form-grid">
+
+            <div class="field">
+                <label>Your Name</label>
+                <input id="customer-name"
+                       type="text"
+                       placeholder="Your name">
+            </div>
+
+            <div class="field">
+                <label>WhatsApp Number</label>
+                <input id="customer-phone"
+                       type="tel"
+                       placeholder="Your WhatsApp number">
+            </div>
+
+            <div class="field">
+                <label>Purpose</label>
+
+                <select id="purpose">
+
+                    <option value="Personal">
+                        Personal
+                    </option>
+
+                    <option value="Gift">
+                        Gift
+                    </option>
+
+                    <option value="Birthday">
+                        Birthday
+                    </option>
+
+                    <option value="Special Occasion">
+                        Special Occasion
+                    </option>
+
+                </select>
+
+            </div>
+
+            <div class="field">
+                <label>Preferred colour details</label>
+
+                <input id="colour-details"
+                       type="text"
+                       placeholder="Any colour combination?">
+            </div>
+
+            <div class="field full">
+
+                <label>
+                    Anything else you'd like us to know?
+                </label>
+
+                <textarea id="extra-details"
+                          placeholder="Tell us about your idea, theme, gift occasion, preferred details, etc."></textarea>
+
+            </div>
+
+        </div>
+
+
+        <div class="action-buttons">
+
+            <button class="action-btn whatsapp"
+                    id="whatsapp-btn">
+                💬 Send Customization on WhatsApp
+            </button>
+
+            <button class="action-btn email"
+                    id="email-btn">
+                ✉️ Send Customization by Email
+            </button>
+
+        </div>
+
+        <div class="notice">
+            🤍 For better and safer reach-out, you can contact SAL’VES
+            Studio directly through WhatsApp or email after sending your
+            customization.
+        </div>
+
+    </section>
+
+</main>
+
+
+<script>
+
+/* =========================================
+   PIPE-CLEANER DESIGN DATA
+========================================= */
+
+const categoryData = {
+
+    Flowers: [
+
+        {
+            name:"Tulip",
+            emoji:"🌷",
+            description:"A sweet little pipe-cleaner tulip"
+        },
+
+        {
+            name:"Daisy",
+            emoji:"🌼",
+            description:"Soft and cheerful daisy"
+        },
+
+        {
+            name:"Rose",
+            emoji:"🌹",
+            description:"A cute handmade rose"
+        },
+
+        {
+            name:"Sunflower",
+            emoji:"🌻",
+            description:"A happy sunflower"
+        },
+
+        {
+            name:"Lavender",
+            emoji:"🪻",
+            description:"A tiny lavender-inspired flower"
+        },
+
+        {
+            name:"Cherry Blossom",
+            emoji:"🌸",
+            description:"Delicate blossom design"
+        },
+
+        {
+            name:"Lily",
+            emoji:"🌺",
+            description:"Elegant flower design"
+        },
+
+        {
+            name:"Flower Bouquet",
+            emoji:"💐",
+            description:"A tiny bouquet arrangement"
+        }
+
+    ],
+
+    Animals: [
+
+        {
+            name:"Bunny",
+            emoji:"🐰",
+            description:"Cute floppy-ear bunny"
+        },
+
+        {
+            name:"Bear",
+            emoji:"🧸",
+            description:"Tiny teddy-inspired bear"
+        },
+
+        {
+            name:"Cat",
+            emoji:"🐱",
+            description:"Little cat figure"
+        },
+
+        {
+            name:"Butterfly",
+            emoji:"🦋",
+            description:"Pretty butterfly"
+        },
+
+        {
+            name:"Bee",
+            emoji:"🐝",
+            description:"Tiny buzzing bee"
+        },
+
+        {
+            name:"Frog",
+            emoji:"🐸",
+            description:"Cute little frog"
+        },
+
+        {
+            name:"Duck",
+            emoji:"🦆",
+            description:"Tiny duck figure"
+        },
+
+        {
+            name:"Penguin",
+            emoji:"🐧",
+            description:"Mini penguin"
+        }
+
+    ],
+
+    Characters: [
+
+        {
+            name:"Teddy",
+            emoji:"🧸",
+            description:"Cute teddy character"
+        },
+
+        {
+            name:"Angel",
+            emoji:"👼",
+            description:"Sweet angel figure"
+        },
+
+        {
+            name:"Princess",
+            emoji:"👸",
+            description:"Tiny princess-inspired figure"
+        },
+
+        {
+            name:"Ballerina",
+            emoji:"🩰",
+            description:"Mini ballerina-inspired figure"
+        },
+
+        {
+            name:"Little Star",
+            emoji:"⭐",
+            description:"Cute star character"
+        },
+
+        {
+            name:"Cloud",
+            emoji:"☁️",
+            description:"Soft cloud character"
+        },
+
+        {
+            name:"Rainbow",
+            emoji:"🌈",
+            description:"Colourful rainbow character"
+        },
+
+        {
+            name:"Heart",
+            emoji:"💗",
+            description:"Sweet heart design"
+        }
+
+    ],
+
+    Keychains: [
+
+        {
+            name:"Heart Keychain",
+            emoji:"💗",
+            description:"Cute heart keychain"
+        },
+
+        {
+            name:"Flower Keychain",
+            emoji:"🌸",
+            description:"Little flower keychain"
+        },
+
+        {
+            name:"Butterfly Keychain",
+            emoji:"🦋",
+            description:"Pretty butterfly keychain"
+        },
+
+        {
+            name:"Star Keychain",
+            emoji:"⭐",
+            description:"Mini star keychain"
+        },
+
+        {
+            name:"Cherry Keychain",
+            emoji:"🍒",
+            description:"Cute cherry pair"
+        },
+
+        {
+            name:"Cloud Keychain",
+            emoji:"☁️",
+            description:"Tiny cloud keychain"
+        },
+
+        {
+            name:"Bow Keychain",
+            emoji:"🎀",
+            description:"Sweet bow design"
+        },
+
+        {
+            name:"Initial Keychain",
+            emoji:"🔤",
+            description:"Personalized initial idea"
+        }
+
+    ],
+
+    Decor: [
+
+        {
+            name:"Flower Stem",
+            emoji:"🌷",
+            description:"Mini decorative flower stem"
+        },
+
+        {
+            name:"Rainbow",
+            emoji:"🌈",
+            description:"Colourful rainbow decor"
+        },
+
+        {
+            name:"Cloud",
+            emoji:"☁️",
+            description:"Soft cloud decoration"
+        },
+
+        {
+            name:"Star",
+            emoji:"⭐",
+            description:"Little star decoration"
+        },
+
+        {
+            name:"Moon",
+            emoji:"🌙",
+            description:"Crescent moon decor"
+        },
+
+        {
+            name:"Butterfly",
+            emoji:"🦋",
+            description:"Decorative butterfly"
+        },
+
+        {
+            name:"Heart",
+            emoji:"🤍",
+            description:"Simple heart decor"
+        },
+
+        {
+            name:"Mini Garden",
+            emoji:"🌱",
+            description:"Tiny garden-inspired piece"
+        }
+
+    ]
+
+};
+
+
+/* =========================================
+   STATE
+========================================= */
+
+let currentCategory = "Flowers";
+
+let selectedDesign = {
+    name:"Tulip",
+    emoji:"🌷"
+};
+
+let selectedColour = "Pastel Blue";
+
+let selectedSize = "Mini";
+
+
+/* =========================================
+   ELEMENTS
+========================================= */
+
+const designGrid =
+    document.getElementById("design-grid");
+
+const categoryButtons =
+    document.querySelectorAll(".category-btn");
+
+const colourButtons =
+    document.querySelectorAll(".colour-option");
+
+const sizeButtons =
+    document.querySelectorAll(".size-btn");
+
+
+/* =========================================
+   LOAD DESIGNS
+========================================= */
+
+function loadDesigns(category){
+
+    currentCategory = category;
+
+    designGrid.innerHTML = "";
+
+    categoryData[category].forEach((design,index)=>{
+
+        const card =
+            document.createElement("div");
+
+        card.className =
+            "design-card" +
+            (index === 0 ? " active" : "");
+
+        card.innerHTML = `
+
+            <div class="design-image">
+                ${design.emoji}
+            </div>
+
+            <div class="design-info">
+
+                <strong>
+                    ${design.name}
+                </strong>
+
+                <span>
+                    ${design.description}
+                </span>
+
+            </div>
+        `;
+
+        card.addEventListener("click",()=>{
+
+            document
+                .querySelectorAll(".design-card")
+                .forEach(item=>{
+                    item.classList.remove("active");
+                });
+
+            card.classList.add("active");
+
+            selectedDesign = {
+                name:design.name,
+                emoji:design.emoji
+            };
+
+            updatePreview();
+
+        });
+
+        designGrid.appendChild(card);
+
+    });
+
+    selectedDesign = {
+        name:categoryData[category][0].name,
+        emoji:categoryData[category][0].emoji
+    };
+
+    updatePreview();
+}
+
+
+/* =========================================
+   CATEGORY BUTTONS
+========================================= */
+
+categoryButtons.forEach(button=>{
+
+    button.addEventListener("click",()=>{
+
+        categoryButtons.forEach(item=>{
+            item.classList.remove("active");
+        });
+
+        button.classList.add("active");
+
+        loadDesigns(
+            button.dataset.category
+        );
+
+    });
+
+});
+
+
+/* =========================================
+   COLOUR BUTTONS
+========================================= */
+
+colourButtons.forEach(button=>{
+
+    button.addEventListener("click",()=>{
+
+        colourButtons.forEach(item=>{
+            item.classList.remove("active");
+        });
+
+        button.classList.add("active");
+
+        selectedColour =
+            button.dataset.colour;
+
+        updatePreview();
+
+    });
+
+});
+
+
+/* =========================================
+   SIZE BUTTONS
+========================================= */
+
+sizeButtons.forEach(button=>{
+
+    button.addEventListener("click",()=>{
+
+        sizeButtons.forEach(item=>{
+            item.classList.remove("active");
+        });
+
+        button.classList.add("active");
+
+        selectedSize =
+            button.dataset.size;
+
+        updatePreview();
+
+    });
+
+});
+
+
+/* =========================================
+   PREVIEW
+========================================= */
+
+function updatePreview(){
+
+    document.getElementById("preview-emoji")
+        .textContent =
+        selectedDesign.emoji;
+
+    document.getElementById("preview-title")
+        .textContent =
+        selectedDesign.name;
+
+    document.getElementById("preview-colour")
+        .textContent =
+        selectedColour;
+
+    document.getElementById("summary-category")
+        .textContent =
+        currentCategory;
+
+    document.getElementById("summary-design")
+        .textContent =
+        selectedDesign.name;
+
+    document.getElementById("summary-colour")
+        .textContent =
+        selectedColour;
+
+    document.getElementById("summary-size")
+        .textContent =
+        selectedSize;
+}
+
+
+/* =========================================
+   CUSTOMER DETAILS
+========================================= */
+
+function getOrderDetails(){
+
+    const name =
+        document.getElementById("customer-name")
+        .value.trim();
+
+    const phone =
+        document.getElementById("customer-phone")
+        .value.trim();
+
+    const purpose =
+        document.getElementById("purpose")
+        .value;
+
+    const colourDetails =
+        document.getElementById("colour-details")
+        .value.trim();
+
+    const extra =
+        document.getElementById("extra-details")
+        .value.trim();
+
+
+    return {
+        name,
+        phone,
+        purpose,
+        colourDetails,
+        extra
+    };
+
+}
+
+
+/* =========================================
+   WHATSAPP
+========================================= */
+
+document
+.getElementById("whatsapp-btn")
+.addEventListener("click",()=>{
+
+    const details =
+        getOrderDetails();
+
+    const message = `Hello SAL’VES Studio! 🩵
+
+I would like to customize a Pipe-Cleaner Art piece.
+
+Name: ${details.name || "Not provided"}
+
+Category: ${currentCategory}
+
+Design: ${selectedDesign.name}
+
+Artwork colour: ${selectedColour}
+
+Size: ${selectedSize}
+
+Purpose: ${details.purpose}
+
+Preferred colour details:
+${details.colourDetails || "None"}
+
+Extra details:
+${details.extra || "None"}
+
+WhatsApp number:
+${details.phone || "Not provided"}
+
+Thank you! ♡`;
+
+
+    const whatsappNumber =
+        "96893853607";
+
+    const url =
+        "https://wa.me/" +
+        whatsappNumber +
+        "?text=" +
+        encodeURIComponent(message);
+
+    window.open(url,"_blank");
+
+});
+
+
+/* =========================================
+   EMAIL
+========================================= */
+
+document
+.getElementById("email-btn")
+.addEventListener("click",()=>{
+
+    const details =
+        getOrderDetails();
+
+    const subject =
+        "SAL’VES Studio Pipe-Cleaner Art Customization";
+
+    const body = `Hello SAL’VES Studio!
+
+I would like to customize a Pipe-Cleaner Art piece.
+
+Name: ${details.name || "Not provided"}
+
+Category: ${currentCategory}
+
+Design: ${selectedDesign.name}
+
+Artwork colour: ${selectedColour}
+
+Size: ${selectedSize}
+
+Purpose: ${details.purpose}
+
+Preferred colour details:
+${details.colourDetails || "None"}
+
+Extra details:
+${details.extra || "None"}
+
+WhatsApp number:
+${details.phone || "Not provided"}
+
+Thank you!`;
+
+
+    window.location.href =
+        "mailto:salwamaryam.th@gmail.com" +
+        "?subject=" +
+        encodeURIComponent(subject) +
+        "&body=" +
+        encodeURIComponent(body);
+
+});
+
+
+/* =========================================
+   CART COUNT
+========================================= */
+
+function updateCartCount(){
+
+    let cart = [];
+
+    try{
+        cart =
+            JSON.parse(
+                localStorage.getItem("salves_cart")
+            ) || [];
+    }catch(error){
+        cart = [];
+    }
+
+    if(!cart.length){
+
+        try{
+            cart =
+                JSON.parse(
+                    localStorage.getItem("salvesCart")
+                ) || [];
+        }catch(error){
+            cart = [];
+        }
+
+    }
+
+    let count = 0;
+
+    cart.forEach(item=>{
+
+        count +=
+            Number(item.quantity || 1);
+
+    });
+
+    document.getElementById("cart-count")
+        .textContent = count;
+
+}
+
+
+/* =========================================
+   START
+========================================= */
+
+loadDesigns("Flowers");
+
+updateCartCount();
+
+</script>
+
+</body>
+</html>
+

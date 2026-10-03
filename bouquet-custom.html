@@ -1,0 +1,2458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Bouquets | SAL’VES Studio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Dancing+Script:wght@500;600;700&family=Fredoka:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    background:
+        radial-gradient(circle at top left,#fff0f2 0,#fff8f8 38%,#ffffff 78%);
+    color:#633b42;
+    font-family:"Quicksand",sans-serif;
+    min-height:100vh;
+}
+
+/* ANNOUNCEMENT */
+
+.announcement{
+    background:#7b2638;
+    color:white;
+    text-align:center;
+    padding:10px 15px;
+    font-size:14px;
+    letter-spacing:.3px;
+}
+
+/* HEADER */
+
+header{
+    width:100%;
+    background:rgba(255,255,255,.95);
+    border-bottom:1px solid #f0d9dd;
+    position:sticky;
+    top:0;
+    z-index:100;
+    backdrop-filter:blur(10px);
+}
+
+.navbar{
+    max-width:1250px;
+    margin:auto;
+    min-height:82px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:12px 25px;
+    gap:25px;
+}
+
+.logo img{
+    width:125px;
+    max-height:62px;
+    object-fit:contain;
+}
+
+nav{
+    display:flex;
+    align-items:center;
+    gap:25px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+nav a{
+    text-decoration:none;
+    color:#633b42;
+    font-weight:600;
+    transition:.25s;
+}
+
+nav a:hover{
+    color:#a94d62;
+}
+
+.cart-link{
+    position:relative;
+    font-size:22px;
+}
+
+.cart-badge{
+    position:absolute;
+    top:-10px;
+    right:-13px;
+    background:#a94d62;
+    color:white;
+    min-width:19px;
+    height:19px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:11px;
+    font-weight:700;
+}
+
+/* HERO */
+
+.hero{
+    text-align:center;
+    padding:55px 20px 30px;
+}
+
+.hero h1{
+    font-family:"Dancing Script",cursive;
+    font-size:54px;
+    color:#7b2638;
+    margin-bottom:8px;
+}
+
+.hero p{
+    max-width:720px;
+    margin:auto;
+    font-size:16px;
+    line-height:1.7;
+    color:#8c6970;
+}
+
+/* MAIN */
+
+.customizer{
+    width:min(1180px,94%);
+    margin:25px auto 70px;
+}
+
+/* STEP */
+
+.step{
+    background:rgba(255,255,255,.94);
+    border:1px solid #efd9de;
+    border-radius:28px;
+    padding:28px;
+    margin-bottom:25px;
+    box-shadow:0 12px 35px rgba(123,38,56,.08);
+}
+
+.step-title{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:20px;
+}
+
+.step-number{
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    background:#f7dce1;
+    color:#7b2638;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:700;
+}
+
+.step-title h2{
+    font-family:"Caveat",cursive;
+    font-size:32px;
+    color:#7b2638;
+}
+
+/* CATEGORY */
+
+.category-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:15px;
+}
+
+.category-btn{
+    border:2px solid #efd9de;
+    background:#fff9fa;
+    border-radius:20px;
+    padding:18px 10px;
+    cursor:pointer;
+    color:#633b42;
+    font-family:"Quicksand",sans-serif;
+    font-weight:700;
+    transition:.25s;
+}
+
+.category-btn .emoji{
+    display:block;
+    font-size:34px;
+    margin-bottom:8px;
+}
+
+.category-btn:hover{
+    transform:translateY(-3px);
+    border-color:#c77b8c;
+}
+
+.category-btn.active{
+    background:#f9e4e8;
+    border-color:#a94d62;
+    box-shadow:0 7px 18px rgba(169,77,98,.15);
+}
+
+/* OPTIONS */
+
+.option-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.option-card{
+    background:#fffafb;
+    border:2px solid #f0dfe2;
+    border-radius:22px;
+    overflow:hidden;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.option-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 25px rgba(123,38,56,.11);
+}
+
+.option-card.active{
+    border-color:#a94d62;
+    box-shadow:0 0 0 3px #f7dce1;
+}
+
+.option-image{
+    height:145px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(135deg,#fff0f3,#f9dfe4);
+    font-size:68px;
+}
+
+.option-info{
+    padding:14px;
+    text-align:center;
+}
+
+.option-info strong{
+    display:block;
+    color:#633b42;
+    margin-bottom:4px;
+}
+
+.option-info span{
+    font-size:12px;
+    color:#98757c;
+}
+
+/* COLOUR */
+
+.colour-grid{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.colour-option{
+    border:2px solid transparent;
+    background:white;
+    border-radius:18px;
+    padding:9px;
+    cursor:pointer;
+    text-align:center;
+    transition:.2s;
+}
+
+.colour-option:hover{
+    transform:translateY(-2px);
+}
+
+.colour-option.active{
+    border-color:#a94d62;
+    box-shadow:0 5px 16px rgba(169,77,98,.16);
+}
+
+.colour-circle{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    margin:auto auto 6px;
+    border:2px solid rgba(0,0,0,.08);
+}
+
+.colour-option span{
+    font-size:12px;
+    font-weight:600;
+    color:#76555c;
+}
+
+/* WRAP */
+
+.wrap-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.wrap-btn{
+    padding:18px 10px;
+    border:2px solid #efd9de;
+    background:white;
+    border-radius:18px;
+    color:#633b42;
+    font-family:"Quicksand",sans-serif;
+    font-weight:700;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.wrap-btn:hover,
+.wrap-btn.active{
+    background:#f9e4e8;
+    border-color:#a94d62;
+}
+
+/* SIZE */
+
+.size-grid{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+}
+
+.size-btn{
+    padding:14px 24px;
+    border:2px solid #efd9de;
+    background:white;
+    border-radius:18px;
+    color:#633b42;
+    font-family:"Quicksand",sans-serif;
+    font-weight:700;
+    cursor:pointer;
+}
+
+.size-btn.active,
+.size-btn:hover{
+    background:#f9e4e8;
+    border-color:#a94d62;
+}
+
+/* ADDONS */
+
+.addon-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.addon-btn{
+    padding:16px 10px;
+    border:2px solid #efd9de;
+    background:white;
+    border-radius:18px;
+    color:#633b42;
+    font-family:"Quicksand",sans-serif;
+    font-weight:700;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.addon-btn.active{
+    background:#f9e4e8;
+    border-color:#a94d62;
+}
+
+/* PREVIEW */
+
+.preview-area{
+    display:grid;
+    grid-template-columns:1.05fr .95fr;
+    gap:25px;
+    align-items:stretch;
+}
+
+.preview-box{
+    min-height:500px;
+    border-radius:30px;
+    background:
+        radial-gradient(circle at center,#ffffff 0,#fff1f4 70%,#f8dce2 100%);
+    border:1px solid #efd9de;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    overflow:hidden;
+}
+
+.preview-box::before,
+.preview-box::after{
+    content:"";
+    position:absolute;
+    border-radius:50%;
+    border:1px solid rgba(169,77,98,.12);
+}
+
+.preview-box::before{
+    width:350px;
+    height:350px;
+}
+
+.preview-box::after{
+    width:520px;
+    height:520px;
+}
+
+.preview-art{
+    position:relative;
+    z-index:2;
+    text-align:center;
+}
+
+.preview-art .big-emoji{
+    font-size:145px;
+    display:block;
+    filter:drop-shadow(0 12px 12px rgba(123,38,56,.13));
+}
+
+.preview-art h3{
+    font-family:"Caveat",cursive;
+    font-size:34px;
+    color:#7b2638;
+    margin-top:8px;
+}
+
+.preview-art p{
+    color:#98757c;
+    margin-top:3px;
+}
+
+.preview-label{
+    position:absolute;
+    top:20px;
+    left:20px;
+    background:white;
+    border:1px solid #efd9de;
+    padding:8px 14px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:700;
+    color:#80505b;
+    z-index:3;
+}
+
+/* SUMMARY */
+
+.summary{
+    background:#fffafb;
+    border:1px solid #efd9de;
+    border-radius:28px;
+    padding:28px;
+}
+
+.summary h2{
+    font-family:"Caveat",cursive;
+    font-size:35px;
+    color:#7b2638;
+    margin-bottom:20px;
+}
+
+.summary-row{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    padding:13px 0;
+    border-bottom:1px dashed #ead2d8;
+}
+
+.summary-row:last-of-type{
+    border-bottom:none;
+}
+
+.summary-row span:first-child{
+    color:#98757c;
+}
+
+.summary-row span:last-child{
+    color:#633b42;
+    font-weight:700;
+    text-align:right;
+}
+
+/* FORM */
+
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+}
+
+.field{
+    display:flex;
+    flex-direction:column;
+    gap:7px;
+}
+
+.field.full{
+    grid-column:1/-1;
+}
+
+.field label{
+    color:#76555c;
+    font-weight:700;
+    font-size:14px;
+}
+
+.field input,
+.field textarea,
+.field select{
+    width:100%;
+    border:1px solid #ead5da;
+    background:white;
+    border-radius:15px;
+    padding:13px 15px;
+    font-family:"Quicksand",sans-serif;
+    color:#633b42;
+    outline:none;
+}
+
+.field input:focus,
+.field textarea:focus,
+.field select:focus{
+    border-color:#b96376;
+    box-shadow:0 0 0 3px #fff0f3;
+}
+
+.field textarea{
+    min-height:105px;
+    resize:vertical;
+}
+
+/* BUTTONS */
+
+.action-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+    margin-top:22px;
+}
+
+.action-btn{
+    flex:1;
+    min-width:220px;
+    padding:16px 22px;
+    border:none;
+    border-radius:18px;
+    cursor:pointer;
+    font-family:"Quicksand",sans-serif;
+    font-weight:700;
+    font-size:15px;
+    transition:.25s;
+}
+
+.action-btn:hover{
+    transform:translateY(-2px);
+}
+
+.whatsapp{
+    background:#dff3e8;
+    color:#28704d;
+}
+
+.email{
+    background:#f7dce1;
+    color:#7b2638;
+}
+
+.notice{
+    margin-top:15px;
+    padding:13px 15px;
+    background:#fff1f4;
+    border-radius:15px;
+    color:#896b72;
+    font-size:13px;
+    line-height:1.6;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .category-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .option-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .wrap-grid,
+    .addon-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .preview-area{
+        grid-template-columns:1fr;
+    }
+
+    .navbar{
+        flex-direction:column;
+        padding:15px;
+    }
+
+    nav{
+        gap:15px;
+    }
+}
+
+@media(max-width:600px){
+
+    .hero h1{
+        font-size:43px;
+    }
+
+    .hero{
+        padding-top:35px;
+    }
+
+    .step{
+        padding:20px;
+        border-radius:22px;
+    }
+
+    .category-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .option-grid{
+        grid-template-columns:1fr 1fr;
+        gap:10px;
+    }
+
+    .option-image{
+        height:115px;
+        font-size:52px;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+    .field.full{
+        grid-column:auto;
+    }
+
+    .preview-box{
+        min-height:390px;
+    }
+
+    .preview-art .big-emoji{
+        font-size:110px;
+    }
+
+    .summary-row{
+        font-size:13px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="announcement">
+    🧶 Handmade with love • Cozy little yarn hugs • 🤎
+</div>
+
+
+<header>
+
+    <div class="navbar">
+
+        <a href="index.html" class="logo">
+            <img
+                src="./images/logo.png"
+                alt="SAL’VES Studio logo"
+                onerror="this.style.display='none';"
+            >
+        </a>
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="shop.html">Shop</a>
+
+            <a href="customize.html">Customize</a>
+
+            <a href="gallery.html">Gallery</a>
+
+            <a href="about.html">About</a>
+
+            <a href="contact.html">Contact</a>
+
+            <a href="cart.html" class="cart-link">
+                🛒
+                <span
+                    class="cart-badge"
+                    id="cart-count"
+                >0</span>
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<section class="hero">
+
+    <h1>💐 Create Your Dream Bouquet</h1>
+
+    <p>
+        Choose your flowers, colours, wrapping and little extras —
+        then create a beautiful SAL’VES bouquet made especially for you ♡
+    </p>
+
+</section>
+
+
+<main class="customizer">
+
+
+<!-- STEP 1 -->
+
+<section class="step">
+
+    <div class="step-title">
+
+        <div class="step-number">
+            1
+        </div>
+
+        <h2>
+            What kind of bouquet are you looking for?
+        </h2>
+
+    </div>
+
+
+    <div class="category-grid">
+
+        <button
+            class="category-btn active"
+            data-category="Flower Bouquets"
+        >
+            <span class="emoji">💐</span>
+            Flower Bouquets
+        </button>
+
+
+        <button
+            class="category-btn"
+            data-category="Single Flower"
+        >
+            <span class="emoji">🌹</span>
+            Single Flower
+        </button>
+
+
+        <button
+            class="category-btn"
+            data-category="Mixed Bouquet"
+        >
+            <span class="emoji">🌸</span>
+            Mixed Bouquet
+        </button>
+
+
+        <button
+            class="category-btn"
+            data-category="Mini Bouquet"
+        >
+            <span class="emoji">🌷</span>
+            Mini Bouquet
+        </button>
+
+
+        <button
+            class="category-btn"
+            data-category="Special"
+        >
+            <span class="emoji">🎀</span>
+            Special
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- STEP 2 -->
+
+<section class="step">
+
+    <div class="step-title">
+
+        <div class="step-number">
+            2
+        </div>
+
+        <h2>
+            Choose your flowers
+        </h2>
+
+    </div>
+
+
+    <div
+        class="option-grid"
+        id="flower-grid"
+    ></div>
+
+</section>
+
+
+<!-- STEP 3 -->
+
+<section class="step">
+
+    <div class="step-title">
+
+        <div class="step-number">
+            3
+        </div>
+
+        <h2>
+            Choose your flower colours
+        </h2>
+
+    </div>
+
+
+    <div class="colour-grid">
+
+
+        <button
+            class="colour-option active"
+            data-colour="Blush Pink"
+        >
+
+            <div
+                class="colour-circle"
+                style="background:#edb5c1;"
+            ></div>
+
+            <span>
+                Blush Pink
+            </span>
+
+        </button>
+
+
+        <button
+            class="colour-option"
+            data-colour="Baby Pink"
+        >
+
+            <div
+                class="colour-circle"
+                style="background:#f7d2dc;"
+            ></div>
+
+            <span>
+                Baby Pink
+            </span>
+
+        </button>
+
+
+        <button
+            class="colour-option"
+            data-colour="Red"
+        >
+
+            <div
+                class="colour-circle"
+                style="background:#b9364f;"
+            ></div>
+
+            <span>
+                Red
+            </span>
+
+        </button>
+
+
+        <button
+            class="colour-option"
+            data-colour="Burgundy"
+        >
+
+            <div
+                class="colour-circle"
+                style="background:#751f32;"
+            ></div>
+
+            <span>
+                Burgundy
+            </span>
+
+        </button>
+
+
+        <button
+            class="colour-option"
+            data-colour="White"
+        >
+
+            <div
+                class="colour-circle"
+                style="background:#ffffff;"
+            ></div>
+
+            <span>
+                White
+            </span>
+
+        </button>
+
+
+        <button
+            class="colour-option"
+            data-colour="Cream"
+        >
+
+            <div
+                class="colour-circle"
+                style="background:#f4e5c8;"
+            ></div>
+
+            <span>
+                Cream
+            </span>
+
+        </button>
+
+
+        <button
+            class="colour-option"
+            data-colour="Peach"
+        >
+
+            <div
+                class="colour-circle"
+                style="background:#f3b18d;"
+            ></div>
+
+            <span>
+                Peach
+            </span>
+
+        </button>
+
+
+        <button
+            class="colour-option"
+            data-colour="Purple"
+        >
+
+            <div
+                class="colour-circle"
+                style="background:#b59ad7;"
+            ></div>
+
+            <span>
+                Purple
+            </span>
+
+        </button>
+
+
+        <button
+            class="colour-option"
+            data-colour="Mixed"
+        >
+
+            <div
+                class="colour-circle"
+                style="
+                background:
+                linear-gradient(
+                    135deg,
+                    #edb5c1,
+                    #f3b18d,
+                    #b59ad7,
+                    #f4e5c8
+                );
+                "
+            ></div>
+
+            <span>
+                Mixed
+            </span>
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- STEP 4 -->
+
+<section class="step">
+
+    <div class="step-title">
+
+        <div class="step-number">
+            4
+        </div>
+
+        <h2>
+            Choose your wrapping
+        </h2>
+
+    </div>
+
+
+    <div class="wrap-grid">
+
+
+        <button
+            class="wrap-btn active"
+            data-wrap="Classic Cream"
+        >
+            🤍 Classic Cream
+        </button>
+
+
+        <button
+            class="wrap-btn"
+            data-wrap="Blush Pink"
+        >
+            🎀 Blush Pink
+        </button>
+
+
+        <button
+            class="wrap-btn"
+            data-wrap="Wine Red"
+        >
+            ❤️ Wine Red
+        </button>
+
+
+        <button
+            class="wrap-btn"
+            data-wrap="Kraft Brown"
+        >
+            🤎 Kraft Brown
+        </button>
+
+
+        <button
+            class="wrap-btn"
+            data-wrap="Lace Wrap"
+        >
+            🕊️ Lace Wrap
+        </button>
+
+
+        <button
+            class="wrap-btn"
+            data-wrap="Ribbon Wrap"
+        >
+            🎗️ Ribbon Wrap
+        </button>
+
+
+        <button
+            class="wrap-btn"
+            data-wrap="Floral Wrap"
+        >
+            🌸 Floral Wrap
+        </button>
+
+
+        <button
+            class="wrap-btn"
+            data-wrap="Custom"
+        >
+            ✨ Custom
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- STEP 5 -->
+
+<section class="step">
+
+    <div class="step-title">
+
+        <div class="step-number">
+            5
+        </div>
+
+        <h2>
+            Add a little something extra
+        </h2>
+
+    </div>
+
+
+    <div class="addon-grid">
+
+
+        <button
+            class="addon-btn"
+            data-addon="Baby's Breath"
+        >
+            🌿 Baby's Breath
+        </button>
+
+
+        <button
+            class="addon-btn"
+            data-addon="Ribbon Bow"
+        >
+            🎀 Ribbon Bow
+        </button>
+
+
+        <button
+            class="addon-btn"
+            data-addon="Pearls"
+        >
+            🤍 Pearls
+        </button>
+
+
+        <button
+            class="addon-btn"
+            data-addon="Butterfly"
+        >
+            🦋 Butterfly
+        </button>
+
+
+        <button
+            class="addon-btn"
+            data-addon="Heart"
+        >
+            💗 Heart
+        </button>
+
+
+        <button
+            class="addon-btn"
+            data-addon="Mini Teddy"
+        >
+            🧸 Mini Teddy
+        </button>
+
+
+        <button
+            class="addon-btn"
+            data-addon="Chocolate"
+        >
+            🍫 Chocolate
+        </button>
+
+
+        <button
+            class="addon-btn"
+            data-addon="Greeting Card"
+        >
+            💌 Greeting Card
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- STEP 6 -->
+
+<section class="step">
+
+    <div class="step-title">
+
+        <div class="step-number">
+            6
+        </div>
+
+        <h2>
+            Choose your bouquet size
+        </h2>
+
+    </div>
+
+
+    <div class="size-grid">
+
+
+        <button
+            class="size-btn active"
+            data-size="Mini"
+        >
+            Mini
+        </button>
+
+
+        <button
+            class="size-btn"
+            data-size="Small"
+        >
+            Small
+        </button>
+
+
+        <button
+            class="size-btn"
+            data-size="Medium"
+        >
+            Medium
+        </button>
+
+
+        <button
+            class="size-btn"
+            data-size="Large"
+        >
+            Large
+        </button>
+
+
+        <button
+            class="size-btn"
+            data-size="Extra Large"
+        >
+            Extra Large
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- PREVIEW -->
+
+<section class="preview-area">
+
+
+    <div class="preview-box">
+
+        <div class="preview-label">
+            LIVE PREVIEW ♡
+        </div>
+
+
+        <div class="preview-art">
+
+            <span
+                class="big-emoji"
+                id="preview-emoji"
+            >
+                💐
+            </span>
+
+
+            <h3 id="preview-title">
+                Classic Bouquet
+            </h3>
+
+
+            <p id="preview-colour">
+                Blush Pink
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="summary">
+
+        <h2>
+            Your bouquet ♡
+        </h2>
+
+
+        <div class="summary-row">
+
+            <span>
+                Bouquet type
+            </span>
+
+            <span id="summary-category">
+                Flower Bouquets
+            </span>
+
+        </div>
+
+
+        <div class="summary-row">
+
+            <span>
+                Flowers
+            </span>
+
+            <span id="summary-flower">
+                Classic Bouquet
+            </span>
+
+        </div>
+
+
+        <div class="summary-row">
+
+            <span>
+                Flower colour
+            </span>
+
+            <span id="summary-colour">
+                Blush Pink
+            </span>
+
+        </div>
+
+
+        <div class="summary-row">
+
+            <span>
+                Wrapping
+            </span>
+
+            <span id="summary-wrap">
+                Classic Cream
+            </span>
+
+        </div>
+
+
+        <div class="summary-row">
+
+            <span>
+                Extras
+            </span>
+
+            <span id="summary-addons">
+                None
+            </span>
+
+        </div>
+
+
+        <div class="summary-row">
+
+            <span>
+                Size
+            </span>
+
+            <span id="summary-size">
+                Mini
+            </span>
+
+        </div>
+
+
+        <div class="notice">
+
+            💐 This is a customization preview.
+            Because every SAL’VES bouquet is handmade,
+            the final arrangement may have tiny natural
+            differences while keeping your chosen style.
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CUSTOMER DETAILS -->
+
+<section
+    class="step"
+    style="margin-top:25px;"
+>
+
+    <div class="step-title">
+
+        <div class="step-number">
+            7
+        </div>
+
+        <h2>
+            Tell us about your bouquet
+        </h2>
+
+    </div>
+
+
+    <div class="form-grid">
+
+
+        <div class="field">
+
+            <label>
+                Your Name
+            </label>
+
+            <input
+                id="customer-name"
+                type="text"
+                placeholder="Your name"
+            >
+
+        </div>
+
+
+        <div class="field">
+
+            <label>
+                WhatsApp Number
+            </label>
+
+            <input
+                id="customer-phone"
+                type="tel"
+                placeholder="Your WhatsApp number"
+            >
+
+        </div>
+
+
+        <div class="field">
+
+            <label>
+                Occasion
+            </label>
+
+            <select id="occasion">
+
+                <option value="Just Because">
+                    Just Because
+                </option>
+
+                <option value="Birthday">
+                    Birthday
+                </option>
+
+                <option value="Anniversary">
+                    Anniversary
+                </option>
+
+                <option value="Graduation">
+                    Graduation
+                </option>
+
+                <option value="Thank You">
+                    Thank You
+                </option>
+
+                <option value="Wedding">
+                    Wedding
+                </option>
+
+                <option value="Special Occasion">
+                    Special Occasion
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="field">
+
+            <label>
+                Preferred delivery / collection date
+            </label>
+
+            <input
+                id="date"
+                type="date"
+            >
+
+        </div>
+
+
+        <div class="field full">
+
+            <label>
+                Any special requests?
+            </label>
+
+            <textarea
+                id="extra-details"
+                placeholder="Tell us about colours, recipient, message for the card, theme, or anything else you would like..."
+            ></textarea>
+
+        </div>
+
+    </div>
+
+
+    <div class="action-buttons">
+
+
+        <button
+            class="action-btn whatsapp"
+            id="whatsapp-btn"
+        >
+            💬 Send Bouquet Request on WhatsApp
+        </button>
+
+
+        <button
+            class="action-btn email"
+            id="email-btn"
+        >
+            ✉️ Send Bouquet Request by Email
+        </button>
+
+    </div>
+
+
+    <div class="notice">
+
+        🤍 For better and safer reach-out, you can contact
+        SAL’VES Studio directly through WhatsApp or email
+        after sending your customization.
+
+    </div>
+
+</section>
+
+</main>
+
+
+<script>
+
+/* =========================================
+   BOUQUET DATA
+========================================= */
+
+const bouquetData = {
+
+    "Flower Bouquets":[
+
+        {
+            name:"Classic Bouquet",
+            emoji:"💐",
+            description:"A timeless mixed flower bouquet"
+        },
+
+        {
+            name:"Rose Bouquet",
+            emoji:"🌹",
+            description:"A romantic rose arrangement"
+        },
+
+        {
+            name:"Tulip Bouquet",
+            emoji:"🌷",
+            description:"Soft and elegant tulips"
+        },
+
+        {
+            name:"Daisy Bouquet",
+            emoji:"🌼",
+            description:"Cheerful little daisies"
+        },
+
+        {
+            name:"Sunflower Bouquet",
+            emoji:"🌻",
+            description:"Bright and happy sunflowers"
+        },
+
+        {
+            name:"Lily Bouquet",
+            emoji:"🌺",
+            description:"Elegant lily arrangement"
+        },
+
+        {
+            name:"Lavender Bouquet",
+            emoji:"🪻",
+            description:"Soft lavender-inspired bouquet"
+        },
+
+        {
+            name:"Baby's Breath Bouquet",
+            emoji:"🌿",
+            description:"Delicate and dreamy"
+        }
+
+    ],
+
+
+    "Single Flower":[
+
+        {
+            name:"Single Rose",
+            emoji:"🌹",
+            description:"One beautiful statement rose"
+        },
+
+        {
+            name:"Single Tulip",
+            emoji:"🌷",
+            description:"Simple and sweet tulip"
+        },
+
+        {
+            name:"Single Sunflower",
+            emoji:"🌻",
+            description:"Bright sunflower"
+        },
+
+        {
+            name:"Single Daisy",
+            emoji:"🌼",
+            description:"Cheerful daisy"
+        },
+
+        {
+            name:"Single Lily",
+            emoji:"🌺",
+            description:"Elegant single flower"
+        },
+
+        {
+            name:"Single Lavender",
+            emoji:"🪻",
+            description:"Soft lavender stem"
+        },
+
+        {
+            name:"Single Peony",
+            emoji:"🌸",
+            description:"Soft peony-inspired flower"
+        },
+
+        {
+            name:"Single Carnation",
+            emoji:"🌷",
+            description:"Pretty carnation-inspired stem"
+        }
+
+    ],
+
+
+    "Mixed Bouquet":[
+
+        {
+            name:"Pastel Mix",
+            emoji:"🌸",
+            description:"Soft pastel flowers"
+        },
+
+        {
+            name:"Pink Mix",
+            emoji:"💐",
+            description:"Pretty shades of pink"
+        },
+
+        {
+            name:"Red Romance",
+            emoji:"🌹",
+            description:"Deep romantic tones"
+        },
+
+        {
+            name:"Sunset Mix",
+            emoji:"🌺",
+            description:"Warm peach and orange tones"
+        },
+
+        {
+            name:"Purple Dream",
+            emoji:"🪻",
+            description:"Dreamy purple shades"
+        },
+
+        {
+            name:"White Garden",
+            emoji:"🤍",
+            description:"Elegant white arrangement"
+        },
+
+        {
+            name:"Spring Mix",
+            emoji:"🌷",
+            description:"Fresh spring-inspired mix"
+        },
+
+        {
+            name:"Rainbow Mix",
+            emoji:"🌈",
+            description:"A colourful happy bouquet"
+        }
+
+    ],
+
+
+    "Mini Bouquet":[
+
+        {
+            name:"Mini Rose",
+            emoji:"🌹",
+            description:"Tiny rose bouquet"
+        },
+
+        {
+            name:"Mini Tulips",
+            emoji:"🌷",
+            description:"Tiny tulip arrangement"
+        },
+
+        {
+            name:"Mini Daisies",
+            emoji:"🌼",
+            description:"Little daisy bouquet"
+        },
+
+        {
+            name:"Mini Pastel",
+            emoji:"🌸",
+            description:"Tiny pastel mix"
+        },
+
+        {
+            name:"Mini Lavender",
+            emoji:"🪻",
+            description:"Little lavender bunch"
+        },
+
+        {
+            name:"Mini Sunflower",
+            emoji:"🌻",
+            description:"Tiny sunny arrangement"
+        },
+
+        {
+            name:"Mini White",
+            emoji:"🤍",
+            description:"Small white bouquet"
+        },
+
+        {
+            name:"Mini Mixed",
+            emoji:"💐",
+            description:"Tiny mixed flowers"
+        }
+
+    ],
+
+
+    "Special":[
+
+        {
+            name:"Birthday Bouquet",
+            emoji:"🎂",
+            description:"Made for birthday celebrations"
+        },
+
+        {
+            name:"Graduation Bouquet",
+            emoji:"🎓",
+            description:"A little graduation surprise"
+        },
+
+        {
+            name:"Anniversary Bouquet",
+            emoji:"💗",
+            description:"For a special anniversary"
+        },
+
+        {
+            name:"Bridal Bouquet",
+            emoji:"👰",
+            description:"Wedding-inspired arrangement"
+        },
+
+        {
+            name:"Thank You Bouquet",
+            emoji:"💐",
+            description:"A thoughtful thank-you gift"
+        },
+
+        {
+            name:"Get Well Bouquet",
+            emoji:"🌷",
+            description:"A sweet caring arrangement"
+        },
+
+        {
+            name:"Just Because",
+            emoji:"💝",
+            description:"No reason needed ♡"
+        },
+
+        {
+            name:"Custom Theme",
+            emoji:"🎀",
+            description:"Tell us your own idea"
+        }
+
+    ]
+
+};
+
+
+/* =========================================
+   STATE
+========================================= */
+
+let currentCategory =
+    "Flower Bouquets";
+
+let selectedFlower = {
+    name:"Classic Bouquet",
+    emoji:"💐"
+};
+
+let selectedColour =
+    "Blush Pink";
+
+let selectedWrap =
+    "Classic Cream";
+
+let selectedSize =
+    "Mini";
+
+let selectedAddons = [];
+
+
+/* =========================================
+   ELEMENTS
+========================================= */
+
+const flowerGrid =
+    document.getElementById("flower-grid");
+
+const categoryButtons =
+    document.querySelectorAll(".category-btn");
+
+const colourButtons =
+    document.querySelectorAll(".colour-option");
+
+const wrapButtons =
+    document.querySelectorAll(".wrap-btn");
+
+const sizeButtons =
+    document.querySelectorAll(".size-btn");
+
+const addonButtons =
+    document.querySelectorAll(".addon-btn");
+
+
+/* =========================================
+   LOAD FLOWERS
+========================================= */
+
+function loadFlowers(category){
+
+    currentCategory =
+        category;
+
+    flowerGrid.innerHTML = "";
+
+    bouquetData[category].forEach(
+        (flower,index)=>{
+
+            const card =
+                document.createElement("div");
+
+            card.className =
+                "option-card" +
+                (index === 0
+                    ? " active"
+                    : "");
+
+            card.innerHTML = `
+
+                <div class="option-image">
+                    ${flower.emoji}
+                </div>
+
+                <div class="option-info">
+
+                    <strong>
+                        ${flower.name}
+                    </strong>
+
+                    <span>
+                        ${flower.description}
+                    </span>
+
+                </div>
+
+            `;
+
+
+            card.addEventListener(
+                "click",
+                ()=>{
+
+                    document
+                    .querySelectorAll(".option-card")
+                    .forEach(item=>{
+                        item.classList
+                        .remove("active");
+                    });
+
+                    card.classList
+                        .add("active");
+
+                    selectedFlower = {
+                        name:flower.name,
+                        emoji:flower.emoji
+                    };
+
+                    updatePreview();
+
+                }
+            );
+
+
+            flowerGrid.appendChild(card);
+
+        }
+    );
+
+
+    selectedFlower = {
+        name:
+            bouquetData[category][0].name,
+
+        emoji:
+            bouquetData[category][0].emoji
+    };
+
+
+    updatePreview();
+
+}
+
+
+/* =========================================
+   CATEGORY BUTTONS
+========================================= */
+
+categoryButtons.forEach(button=>{
+
+    button.addEventListener(
+        "click",
+        ()=>{
+
+            categoryButtons
+            .forEach(item=>{
+                item.classList
+                    .remove("active");
+            });
+
+            button.classList
+                .add("active");
+
+            loadFlowers(
+                button.dataset.category
+            );
+
+        }
+    );
+
+});
+
+
+/* =========================================
+   COLOURS
+========================================= */
+
+colourButtons.forEach(button=>{
+
+    button.addEventListener(
+        "click",
+        ()=>{
+
+            colourButtons
+            .forEach(item=>{
+                item.classList
+                    .remove("active");
+            });
+
+            button.classList
+                .add("active");
+
+            selectedColour =
+                button.dataset.colour;
+
+            updatePreview();
+
+        }
+    );
+
+});
+
+
+/* =========================================
+   WRAPPING
+========================================= */
+
+wrapButtons.forEach(button=>{
+
+    button.addEventListener(
+        "click",
+        ()=>{
+
+            wrapButtons
+            .forEach(item=>{
+                item.classList
+                    .remove("active");
+            });
+
+            button.classList
+                .add("active");
+
+            selectedWrap =
+                button.dataset.wrap;
+
+            updatePreview();
+
+        }
+    );
+
+});
+
+
+/* =========================================
+   ADDONS
+========================================= */
+
+addonButtons.forEach(button=>{
+
+    button.addEventListener(
+        "click",
+        ()=>{
+
+            const addon =
+                button.dataset.addon;
+
+            if(
+                selectedAddons
+                .includes(addon)
+            ){
+
+                selectedAddons =
+                    selectedAddons
+                    .filter(
+                        item=>item!==addon
+                    );
+
+                button.classList
+                    .remove("active");
+
+            }else{
+
+                selectedAddons.push(addon);
+
+                button.classList
+                    .add("active");
+
+            }
+
+            updatePreview();
+
+        }
+    );
+
+});
+
+
+/* =========================================
+   SIZE
+========================================= */
+
+sizeButtons.forEach(button=>{
+
+    button.addEventListener(
+        "click",
+        ()=>{
+
+            sizeButtons
+            .forEach(item=>{
+                item.classList
+                    .remove("active");
+            });
+
+            button.classList
+                .add("active");
+
+            selectedSize =
+                button.dataset.size;
+
+            updatePreview();
+
+        }
+    );
+
+});
+
+
+/* =========================================
+   PREVIEW
+========================================= */
+
+function updatePreview(){
+
+    document.getElementById(
+        "preview-emoji"
+    ).textContent =
+        selectedFlower.emoji;
+
+
+    document.getElementById(
+        "preview-title"
+    ).textContent =
+        selectedFlower.name;
+
+
+    document.getElementById(
+        "preview-colour"
+    ).textContent =
+        selectedColour;
+
+
+    document.getElementById(
+        "summary-category"
+    ).textContent =
+        currentCategory;
+
+
+    document.getElementById(
+        "summary-flower"
+    ).textContent =
+        selectedFlower.name;
+
+
+    document.getElementById(
+        "summary-colour"
+    ).textContent =
+        selectedColour;
+
+
+    document.getElementById(
+        "summary-wrap"
+    ).textContent =
+        selectedWrap;
+
+
+    document.getElementById(
+        "summary-size"
+    ).textContent =
+        selectedSize;
+
+
+    document.getElementById(
+        "summary-addons"
+    ).textContent =
+        selectedAddons.length
+        ? selectedAddons.join(", ")
+        : "None";
+
+}
+
+
+/* =========================================
+   CUSTOMER DETAILS
+========================================= */
+
+function getCustomerDetails(){
+
+    return {
+
+        name:
+            document
+            .getElementById(
+                "customer-name"
+            )
+            .value
+            .trim(),
+
+        phone:
+            document
+            .getElementById(
+                "customer-phone"
+            )
+            .value
+            .trim(),
+
+        occasion:
+            document
+            .getElementById(
+                "occasion"
+            )
+            .value,
+
+        date:
+            document
+            .getElementById(
+                "date"
+            )
+            .value,
+
+        extra:
+            document
+            .getElementById(
+                "extra-details"
+            )
+            .value
+            .trim()
+
+    };
+
+}
+
+
+/* =========================================
+   WHATSAPP
+========================================= */
+
+document
+.getElementById("whatsapp-btn")
+.addEventListener(
+    "click",
+    ()=>{
+
+        const details =
+            getCustomerDetails();
+
+
+        const message = `Hello SAL’VES Studio! 💐
+
+I would like to customize a bouquet.
+
+Name: ${details.name || "Not provided"}
+
+Bouquet type: ${currentCategory}
+
+Flowers: ${selectedFlower.name}
+
+Flower colour: ${selectedColour}
+
+Wrapping: ${selectedWrap}
+
+Extras: ${
+    selectedAddons.length
+    ? selectedAddons.join(", ")
+    : "None"
+}
+
+Size: ${selectedSize}
+
+Occasion: ${details.occasion}
+
+Preferred date: ${
+    details.date || "Not provided"
+}
+
+Special requests:
+${details.extra || "None"}
+
+WhatsApp number:
+${details.phone || "Not provided"}
+
+Thank you! ♡`;
+
+
+        const whatsappNumber =
+            "96893853607";
+
+
+        const url =
+            "https://wa.me/" +
+            whatsappNumber +
+            "?text=" +
+            encodeURIComponent(
+                message
+            );
+
+
+        window.open(
+            url,
+            "_blank"
+        );
+
+    }
+);
+
+
+/* =========================================
+   EMAIL
+========================================= */
+
+document
+.getElementById("email-btn")
+.addEventListener(
+    "click",
+    ()=>{
+
+        const details =
+            getCustomerDetails();
+
+
+        const subject =
+            "SAL’VES Studio Bouquet Customization";
+
+
+        const body = `Hello SAL’VES Studio!
+
+I would like to customize a bouquet.
+
+Name: ${details.name || "Not provided"}
+
+Bouquet type: ${currentCategory}
+
+Flowers: ${selectedFlower.name}
+
+Flower colour: ${selectedColour}
+
+Wrapping: ${selectedWrap}
+
+Extras: ${
+    selectedAddons.length
+    ? selectedAddons.join(", ")
+    : "None"
+}
+
+Size: ${selectedSize}
+
+Occasion: ${details.occasion}
+
+Preferred date: ${
+    details.date || "Not provided"
+}
+
+Special requests:
+${details.extra || "None"}
+
+WhatsApp number:
+${details.phone || "Not provided"}
+
+Thank you!`;
+
+
+        window.location.href =
+            "mailto:salwamaryam.th@gmail.com" +
+            "?subject=" +
+            encodeURIComponent(subject) +
+            "&body=" +
+            encodeURIComponent(body);
+
+    }
+);
+
+
+/* =========================================
+   CART COUNT
+========================================= */
+
+function updateCartCount(){
+
+    let cart = [];
+
+
+    try{
+
+        cart =
+            JSON.parse(
+                localStorage.getItem(
+                    "salves_cart"
+                )
+            ) || [];
+
+    }catch(error){
+
+        cart = [];
+
+    }
+
+
+    if(!cart.length){
+
+        try{
+
+            cart =
+                JSON.parse(
+                    localStorage.getItem(
+                        "salvesCart"
+                    )
+                ) || [];
+
+        }catch(error){
+
+            cart = [];
+
+        }
+
+    }
+
+
+    let count = 0;
+
+
+    cart.forEach(item=>{
+
+        count +=
+            Number(
+                item.quantity || 1
+            );
+
+    });
+
+
+    document.getElementById(
+        "cart-count"
+    ).textContent =
+        count;
+
+}
+
+
+/* =========================================
+   START
+========================================= */
+
+loadFlowers(
+    "Flower Bouquets"
+);
+
+updateCartCount();
+
+</script>
+
+</body>
+</html>

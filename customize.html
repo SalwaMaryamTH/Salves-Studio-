@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Customize ♡ SAL’VES Studio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Dancing+Script:wght@500;600;700&family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap"
+rel="stylesheet">
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background:
+        radial-gradient(circle at 10% 10%, #f7e8df 0 3px, transparent 4px),
+        radial-gradient(circle at 90% 30%, #ead5c8 0 3px, transparent 4px),
+        #f8eee7;
+    color: #5f4439;
+    font-family: "Quicksand", sans-serif;
+}
+
+
+/* =====================================================
+   ANNOUNCEMENT
+===================================================== */
+
+.announcement {
+    background: #704c3c;
+    color: white;
+    text-align: center;
+    padding: 9px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header {
+    background: #fffaf6;
+    border-bottom: 2px solid #ead7cb;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    max-width: 1250px;
+    margin: auto;
+    min-height: 82px;
+    padding: 12px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #664237;
+    font-family: "Caveat", cursive;
+    font-size: 30px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.logo img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #664237;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    color: #b47760;
+}
+
+.cart-link {
+    background: #f2dfd3;
+    padding: 9px 13px;
+    border-radius: 20px;
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.page-heading {
+    text-align: center;
+    padding: 55px 20px 35px;
+}
+
+.page-heading .small {
+    font-size: 15px;
+    color: #a67b65;
+    font-weight: 700;
+}
+
+.page-heading h1 {
+    margin: 6px 0;
+    font-family: "Dancing Script", cursive;
+    font-size: clamp(45px, 6vw, 72px);
+    color: #684538;
+}
+
+.page-heading p {
+    max-width: 720px;
+    margin: 12px auto;
+    line-height: 1.8;
+    color: #80655a;
+    font-size: 16px;
+}
+
+
+/* =====================================================
+   CATEGORY INTRO
+===================================================== */
+
+.category-intro {
+    width: min(900px, 92%);
+    margin: 0 auto 35px;
+    text-align: center;
+}
+
+.category-intro h2 {
+    margin: 0 0 8px;
+    font-family: "Caveat", cursive;
+    font-size: 34px;
+    color: #704c3c;
+}
+
+.category-intro p {
+    margin: 0;
+    line-height: 1.7;
+    color: #80655a;
+}
+
+
+/* =====================================================
+   COLOR WORLD CARDS
+===================================================== */
+
+.customize-worlds {
+    width: min(1250px, 94%);
+    margin: 0 auto 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+
+/* EVERY CATEGORY IS A BIG FULL RECTANGLE */
+
+.world-card {
+    position: relative;
+    min-height: 190px;
+    width: 100%;
+    border-radius: 30px;
+    overflow: hidden;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 35px 55px;
+    color: #fff;
+    box-shadow: 0 10px 28px rgba(91, 61, 51, .13);
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.world-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 35px rgba(91, 61, 51, .18);
+}
+
+
+/* =====================================================
+   PINK — CROCHET
+===================================================== */
+
+.crochet-world {
+    background:
+        linear-gradient(
+            100deg,
+            #f8d9df,
+            #f3c4cf,
+            #edb1c0,
+            #f5d1d8,
+            #e9a5b7
+        );
+}
+
+
+/* =====================================================
+   PURPLE — CALLIGRAPHY
+===================================================== */
+
+.calligraphy-world {
+    background:
+        linear-gradient(
+            100deg,
+            #eadcf4,
+            #d9c4ea,
+            #c9a9df,
+            #b88dcc,
+            #9f72ba
+        );
+}
+
+
+/* =====================================================
+   BLUE — PIPE CLEANER ART
+===================================================== */
+
+.pipe-world {
+    background:
+        linear-gradient(
+            100deg,
+            #d7effc,
+            #b9ddf4,
+            #8fc5e9,
+            #629fc9,
+            #397ba9
+        );
+}
+
+
+/* =====================================================
+   RED / WINE — BOUQUETS
+===================================================== */
+
+.bouquet-world {
+    background:
+        linear-gradient(
+            100deg,
+            #e8b9bd,
+            #cf7d86,
+            #b95763,
+            #8f3544,
+            #672431
+        );
+}
+
+
+/* =====================================================
+   YELLOW — HAMPERS
+===================================================== */
+
+.hamper-world {
+    background:
+        linear-gradient(
+            100deg,
+            #fff0a9,
+            #f7dc68,
+            #e9bd35,
+            #d99a20,
+            #c87518
+        );
+}
+
+
+/* =====================================================
+   CARD CONTENT
+===================================================== */
+
+.world-content {
+    position: relative;
+    z-index: 3;
+    max-width: 650px;
+}
+
+.world-icon {
+    font-size: 35px;
+    margin-bottom: 4px;
+}
+
+.world-content h2 {
+    margin: 0;
+    font-family: "Dancing Script", cursive;
+    font-size: clamp(38px, 5vw, 58px);
+}
+
+.world-content p {
+    margin: 6px 0 17px;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.explore {
+    display: inline-block;
+    background: rgba(255,255,255,.88);
+    color: #664237;
+    padding: 10px 20px;
+    border-radius: 22px;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   DECORATIVE SHADE DOTS
+===================================================== */
+
+.shade-dots {
+    display: flex;
+    gap: 9px;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.shade-dots span {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,.75);
+    box-shadow: 0 3px 7px rgba(0,0,0,.12);
+}
+
+
+/* PINK DOTS */
+
+.crochet-world .shade-dots span:nth-child(1) {
+    background: #f9e5e9;
+}
+
+.crochet-world .shade-dots span:nth-child(2) {
+    background: #f3c4cf;
+}
+
+.crochet-world .shade-dots span:nth-child(3) {
+    background: #e9a5b7;
+}
+
+.crochet-world .shade-dots span:nth-child(4) {
+    background: #d98299;
+}
+
+
+/* PURPLE DOTS */
+
+.calligraphy-world .shade-dots span:nth-child(1) {
+    background: #eadcf4;
+}
+
+.calligraphy-world .shade-dots span:nth-child(2) {
+    background: #c9a9df;
+}
+
+.calligraphy-world .shade-dots span:nth-child(3) {
+    background: #b88dcc;
+}
+
+.calligraphy-world .shade-dots span:nth-child(4) {
+    background: #8f62a9;
+}
+
+
+/* BLUE DOTS */
+
+.pipe-world .shade-dots span:nth-child(1) {
+    background: #d7effc;
+}
+
+.pipe-world .shade-dots span:nth-child(2) {
+    background: #9ed0ed;
+}
+
+.pipe-world .shade-dots span:nth-child(3) {
+    background: #629fc9;
+}
+
+.pipe-world .shade-dots span:nth-child(4) {
+    background: #397ba9;
+}
+
+
+/* RED DOTS */
+
+.bouquet-world .shade-dots span:nth-child(1) {
+    background: #e8b9bd;
+}
+
+.bouquet-world .shade-dots span:nth-child(2) {
+    background: #cf7d86;
+}
+
+.bouquet-world .shade-dots span:nth-child(3) {
+    background: #9f4350;
+}
+
+.bouquet-world .shade-dots span:nth-child(4) {
+    background: #672431;
+}
+
+
+/* YELLOW DOTS */
+
+.hamper-world .shade-dots span:nth-child(1) {
+    background: #fff0a9;
+}
+
+.hamper-world .shade-dots span:nth-child(2) {
+    background: #f7dc68;
+}
+
+.hamper-world .shade-dots span:nth-child(3) {
+    background: #e9bd35;
+}
+
+.hamper-world .shade-dots span:nth-child(4) {
+    background: #c87518;
+}
+
+
+/* =====================================================
+   BOTTOM NOTE
+===================================================== */
+
+.future-note {
+    width: min(850px, 90%);
+    margin: 0 auto 80px;
+    padding: 25px;
+    text-align: center;
+    background: #fffaf6;
+    border: 2px dashed #ddc2b4;
+    border-radius: 25px;
+}
+
+.future-note h3 {
+    margin: 0 0 5px;
+    font-family: "Caveat", cursive;
+    font-size: 29px;
+    color: #704c3c;
+}
+
+.future-note p {
+    margin: 0;
+    color: #80655a;
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 750px) {
+
+    .navbar {
+        flex-direction: column;
+        padding: 12px 15px;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .page-heading {
+        padding: 38px 17px 25px;
+    }
+
+    .page-heading h1 {
+        font-size: 47px;
+    }
+
+    .page-heading p {
+        font-size: 14px;
+    }
+
+    .customize-worlds {
+        width: 94%;
+        gap: 16px;
+    }
+
+    .world-card {
+        min-height: 260px;
+        padding: 30px 25px;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 25px;
+    }
+
+    .world-content {
+        max-width: 100%;
+    }
+
+    .world-content h2 {
+        font-size: 42px;
+    }
+
+    .world-content p {
+        max-width: 100%;
+        font-size: 14px;
+    }
+
+    .shade-dots {
+        margin: 18px 0 0;
+    }
+
+    .shade-dots span {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .logo img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .world-card {
+        min-height: 275px;
+        padding: 28px 21px;
+    }
+
+    .world-content h2 {
+        font-size: 38px;
+    }
+
+    .world-icon {
+        font-size: 29px;
+    }
+
+    .shade-dots {
+        gap: 7px;
+    }
+
+    .shade-dots span {
+        width: 22px;
+        height: 22px;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- =====================================================
+     ANNOUNCEMENT
+===================================================== -->
+
+<div class="announcement">
+🧶 Handmade with love • Cozy little yarn hugs • 🤎
+</div>
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+<nav class="navbar">
+
+<a href="index.html" class="logo">
+
+<img
+src="images/logo.png"
+alt="SAL’VES Studio"
+
+>
+
+SAL’VES Studio
+
+</a>
+
+<div class="nav-links">
+
+<a href="index.html">
+Home
+</a>
+
+<a href="shop.html">
+Shop
+</a>
+
+<a href="customize.html">
+Customize
+</a>
+
+<a href="gallery.html">
+Gallery
+</a>
+
+<a href="about.html">
+About
+</a>
+
+<a href="contact.html">
+Contact
+</a>
+
+<a href="cart.html" class="cart-link">
+🛒 <span id="cart-count">0</span>
+</a>
+
+</div>
+
+</nav>
+
+</header>
+
+<!-- =====================================================
+     PAGE HEADING
+===================================================== -->
+
+<section class="page-heading">
+
+<div class="small">
+🎀 Made especially for you
+</div>
+
+<h1>
+Create Something That Feels Like You ♡
+</h1>
+
+<p>
+Every SAL’VES creation can be made a little more personal.
+Choose your creative world below and step into a space filled
+with its own colours, details and handmade possibilities.
+</p>
+
+</section>
+
+<section class="category-intro">
+
+<h2>
+Choose Your SAL’VES World ♡
+</h2>
+
+<p>
+From soft crochet to meaningful calligraphy, playful
+pipe-cleaner art, beautiful bouquets and thoughtful hampers —
+choose what you would love to create.
+</p>
+
+</section>
+
+<!-- =====================================================
+     CATEGORY WORLDS
+===================================================== -->
+
+<main class="customize-worlds">
+
+<!-- =====================================================
+     CROCHET
+     THIS OPENS THE EXISTING CUSTOM.HTML
+===================================================== -->
+
+<a
+href="custom.html"
+class="world-card crochet-world"
+
+>
+
+<div class="world-content">
+
+<div class="world-icon">
+🧶
+</div>
+
+<h2>
+Crochet
+</h2>
+
+<p>
+Soft stitches, cozy colours and your very own
+handmade crochet piece. Enter the original
+SAL’VES Crochet Customizer.
+</p>
+
+<span class="explore">
+Enter Crochet Customizer ♡
+</span>
+
+</div>
+
+<div class="shade-dots">
+
+<span></span> <span></span> <span></span> <span></span>
+
+</div>
+
+</a>
+
+<!-- =====================================================
+     CALLIGRAPHY
+===================================================== -->
+
+<a
+href="calligraphy-custom.html"
+class="world-card calligraphy-world"
+
+>
+
+<div class="world-content">
+
+<div class="world-icon">
+🖋️
+</div>
+
+<h2>
+Arabic Calligraphy
+</h2>
+
+<p>
+Meaningful words, beautiful lettering and
+handmade artwork surrounded by a dreamy
+world of purple shades.
+</p>
+
+<span class="explore">
+Explore Calligraphy →
+</span>
+
+</div>
+
+<div class="shade-dots">
+
+<span></span> <span></span> <span></span> <span></span>
+
+</div>
+
+</a>
+
+<!-- =====================================================
+     PIPE CLEANER ART
+===================================================== -->
+
+<a
+href="pipe-cleaner-custom.html"
+class="world-card pipe-world"
+
+>
+
+<div class="world-content">
+
+<div class="world-icon">
+🩵
+</div>
+
+<h2>
+Pipe-Cleaner Art
+</h2>
+
+<p>
+Playful little handmade creations in a world
+of baby blue, sky blue, deep blue and every
+shade in between.
+</p>
+
+<span class="explore">
+Explore Pipe-Cleaner Art →
+</span>
+
+</div>
+
+<div class="shade-dots">
+
+<span></span> <span></span> <span></span> <span></span>
+
+</div>
+
+</a>
+
+<!-- =====================================================
+     BOUQUETS
+===================================================== -->
+
+<a
+href="bouquet-custom.html"
+class="world-card bouquet-world"
+
+>
+
+<div class="world-content">
+
+<div class="world-icon">
+💐
+</div>
+
+<h2>
+Bouquets
+</h2>
+
+<p>
+Thoughtful handmade bouquets wrapped in
+beautiful shades ranging from soft red
+to rich velvet wine.
+</p>
+
+<span class="explore">
+Explore Bouquets →
+</span>
+
+</div>
+
+<div class="shade-dots">
+
+<span></span> <span></span> <span></span> <span></span>
+
+</div>
+
+</a>
+
+<!-- =====================================================
+     HAMPERS
+===================================================== -->
+
+<a
+href="hamper-custom.html"
+class="world-card hamper-world"
+
+>
+
+<div class="world-content">
+
+<div class="world-icon">
+🎁
+</div>
+
+<h2>
+Hampers
+</h2>
+
+<p>
+Thoughtfully curated gifts brought to life
+through pale yellow, butter, golden and
+warm honey shades.
+</p>
+
+<span class="explore">
+Explore Hampers →
+</span>
+
+</div>
+
+<div class="shade-dots">
+
+<span></span> <span></span> <span></span> <span></span>
+
+</div>
+
+</a>
+
+</main>
+
+<!-- =====================================================
+     FUTURE CATEGORIES
+===================================================== -->
+
+<section class="future-note">
+
+<h3>
+More little worlds are coming ♡
+</h3>
+
+<p>
+SAL’VES Studio will keep growing, so new handmade
+categories can be added here in the future without
+changing the whole website.
+</p>
+
+</section>
+
+<script>
+
+function updateCartCount() {
+
+    const cartCount =
+        document.getElementById("cart-count");
+
+    if (!cartCount) return;
+
+    let cart = [];
+
+    try {
+
+        cart =
+            JSON.parse(
+                localStorage.getItem("salves_cart") || "[]"
+            );
+
+        if (!cart.length) {
+
+            cart =
+                JSON.parse(
+                    localStorage.getItem("salvesCart") || "[]"
+                );
+
+        }
+
+    } catch (error) {
+
+        cart = [];
+
+    }
+
+    let total = 0;
+
+    cart.forEach(function(item) {
+
+        total += Number(item.quantity || 1);
+
+    });
+
+    cartCount.textContent = total;
+
+}
+
+updateCartCount();
+
+</script>
+
+</body>
+
+</html>
